@@ -29,7 +29,7 @@ namespace FYPTesting.Features
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "FirstPage.feature"
+#line 1 "FirstPanel.feature"
 #line hidden
         
         public virtual Microsoft.VisualStudio.TestTools.UnitTesting.TestContext TestContext
@@ -93,22 +93,21 @@ namespace FYPTesting.Features
         
         public virtual void FeatureBackground()
         {
-#line 3
+#line 6
 #line hidden
-#line 4
+#line 7
  testRunner.Given("the app is running", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
         }
         
-        public virtual void EircodeInputValidationValid(string iD, string input, string comment, string[] exampleTags)
+        public virtual void ObjectsExistOnPage(string iD, string @object, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("ID", iD);
-            argumentsOfScenario.Add("Input", input);
-            argumentsOfScenario.Add("Comment", comment);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Eircode Input Validation (Valid)", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 6
+            argumentsOfScenario.Add("Object", @object);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Objects Exist on Page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 9
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -128,16 +127,80 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 3
+#line 6
 this.FeatureBackground();
 #line hidden
-#line 7
+#line 10
+ testRunner.Then(string.Format("\"{0}\" exists", @object), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Objects Exist on Page: 1")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "First Page")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "1")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:ID", "1")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Object", "Eircode Input")]
+        public virtual void ObjectsExistOnPage_1()
+        {
+#line 9
+this.ObjectsExistOnPage("1", "Eircode Input", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Objects Exist on Page: 2")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "First Page")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "2")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:ID", "2")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Object", "Submit Button")]
+        public virtual void ObjectsExistOnPage_2()
+        {
+#line 9
+this.ObjectsExistOnPage("2", "Submit Button", ((string[])(null)));
+#line hidden
+        }
+        
+        public virtual void EircodeInputValidationValid(string iD, string input, string comment, string[] exampleTags)
+        {
+            string[] tagsOfScenario = exampleTags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("ID", iD);
+            argumentsOfScenario.Add("Input", input);
+            argumentsOfScenario.Add("Comment", comment);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Eircode Input Validation (Valid)", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 16
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 6
+this.FeatureBackground();
+#line hidden
+#line 17
  testRunner.When(string.Format("I input \"{0}\" for Eircode", input), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 8
+#line 18
  testRunner.And("I Press submit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 9
+#line 19
  testRunner.Then("the input is \"valid\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -153,7 +216,7 @@ this.FeatureBackground();
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Comment", "Standard input")]
         public virtual void EircodeInputValidationValid_1()
         {
-#line 6
+#line 16
 this.EircodeInputValidationValid("1", "D24 FT12", "Standard input", ((string[])(null)));
 #line hidden
         }
@@ -167,7 +230,7 @@ this.EircodeInputValidationValid("1", "D24 FT12", "Standard input", ((string[])(
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Comment", "Standard input")]
         public virtual void EircodeInputValidationValid_2()
         {
-#line 6
+#line 16
 this.EircodeInputValidationValid("2", "X99 9999", "Standard input", ((string[])(null)));
 #line hidden
         }
@@ -180,7 +243,7 @@ this.EircodeInputValidationValid("2", "X99 9999", "Standard input", ((string[])(
             argumentsOfScenario.Add("Input", input);
             argumentsOfScenario.Add("Comment", comment);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Eircode Input Validation (Invalid)", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 15
+#line 25
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -200,13 +263,13 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 3
+#line 6
 this.FeatureBackground();
 #line hidden
-#line 16
+#line 26
  testRunner.When(string.Format("I input \"{0}\" for Eircode", input), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 17
+#line 27
  testRunner.Then("the input is \"invalid\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -222,7 +285,7 @@ this.FeatureBackground();
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Comment", "No space between routing keys and unique identifiers")]
         public virtual void EircodeInputValidationInvalid_1()
         {
-#line 15
+#line 25
 this.EircodeInputValidationInvalid("1", "H91Y7W8", "No space between routing keys and unique identifiers", ((string[])(null)));
 #line hidden
         }
@@ -236,7 +299,7 @@ this.EircodeInputValidationInvalid("1", "H91Y7W8", "No space between routing key
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Comment", "Invalid number of chars")]
         public virtual void EircodeInputValidationInvalid_2()
         {
-#line 15
+#line 25
 this.EircodeInputValidationInvalid("2", "H91", "Invalid number of chars", ((string[])(null)));
 #line hidden
         }
@@ -250,7 +313,7 @@ this.EircodeInputValidationInvalid("2", "H91", "Invalid number of chars", ((stri
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Comment", "Invalid input")]
         public virtual void EircodeInputValidationInvalid_3()
         {
-#line 15
+#line 25
 this.EircodeInputValidationInvalid("3", "[]+-_@", "Invalid input", ((string[])(null)));
 #line hidden
         }
@@ -264,7 +327,7 @@ this.EircodeInputValidationInvalid("3", "[]+-_@", "Invalid input", ((string[])(n
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Comment", "Too many chars")]
         public virtual void EircodeInputValidationInvalid_4()
         {
-#line 15
+#line 25
 this.EircodeInputValidationInvalid("4", "H91 111111", "Too many chars", ((string[])(null)));
 #line hidden
         }
@@ -278,7 +341,7 @@ this.EircodeInputValidationInvalid("4", "H91 111111", "Too many chars", ((string
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Comment", "No chars")]
         public virtual void EircodeInputValidationInvalid_5()
         {
-#line 15
+#line 25
 this.EircodeInputValidationInvalid("5", "", "No chars", ((string[])(null)));
 #line hidden
         }
@@ -292,9 +355,53 @@ this.EircodeInputValidationInvalid("5", "", "No chars", ((string[])(null)));
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Comment", "Unicode character (per mille sign)")]
         public virtual void EircodeInputValidationInvalid_6()
         {
-#line 15
+#line 25
 this.EircodeInputValidationInvalid("6", "H91 Y7W‰", "Unicode character (per mille sign)", ((string[])(null)));
 #line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Successful Submission Displays Appropriate Message")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "First Page")]
+        public virtual void SuccessfulSubmissionDisplaysAppropriateMessage()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Successful Submission Displays Appropriate Message", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 37
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 6
+this.FeatureBackground();
+#line hidden
+#line 38
+  testRunner.When("I input \"H91 Y7W9\" for Eircode", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 39
+  testRunner.And("I Press submit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 40
+  testRunner.Then("a success message is displayed to the user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
         }
     }
 }

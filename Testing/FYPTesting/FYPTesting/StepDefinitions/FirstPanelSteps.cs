@@ -7,12 +7,12 @@ using SeleniumExtras.WaitHelpers;
 namespace FYPTesting.StepDefinitions
 {
     [Binding]
-    public class FirstPageSteps
+    public class FirstPanelSteps
     {
         IWebDriver driver;
         private readonly ScenarioContext _scenarioContext;
 
-        public FirstPageSteps(ScenarioContext scenarioContext)
+        public FirstPanelSteps(ScenarioContext scenarioContext)
         {
             _scenarioContext = scenarioContext;
         }
@@ -45,17 +45,28 @@ namespace FYPTesting.StepDefinitions
             }
         }
 
-        [Given(@"the app is running")]
-        public void GivenTheAppIsRunning()
-        {
-            driver = _scenarioContext.Get<SeleniumDriver>("SeleniumDriver").Setup();
-        }
+        //[Given(@"the app is running")]
+        //public void GivenTheAppIsRunning()
+        //{
+        //    driver = _scenarioContext.Get<SeleniumDriver>("SeleniumDriver").Setup();
+        //}
 
         [When(@"I input ""([^""]*)"" for Eircode")]
         public void WhenIInputForEircode(string Input)
         {
             var TextBox = WaitForElementToClickable(By.XPath("//div[@data-type='panel'][1]//input"));
-            TextBox.SendKeys(Input);
+
+            //if blank input is being tested, send a character and delete it to display the error message.
+            if(Input.ToLower().Equals(""))
+            {
+                TextBox.SendKeys(Keys.Space);
+                TextBox.SendKeys(Keys.Backspace);
+            }
+            else
+            {
+                TextBox.SendKeys(Input);
+            }
+
             TextBox.SendKeys(Keys.Enter);
         }
 
@@ -79,6 +90,31 @@ namespace FYPTesting.StepDefinitions
                 var ErrorMessage = WaitForElementToClickable(By.XPath("//div[@data-type='panel'][1]//div[3]//span"));
                 ErrorMessage.Text.Should().Be("Please check your input!", "because an incorrect input was entered");
             }
+        }
+
+        [Then(@"""([^""]*)"" exists")]
+        public void ThenExists(string ObjectToFind)
+        {
+            if(ObjectToFind.ToLower().Equals("eircode input"))
+            {
+                var InputButton = WaitForElementToClickable(By.XPath("//div[@data-type='panel'][1]//input"));
+                InputButton.Should().NotBeNull();
+            } 
+            else if(ObjectToFind.ToLower().Equals("submit button"))
+            {
+                var SubmitButton = WaitForElementToClickable(By.XPath("//div[@data-type='panel'][2]//div//div"));
+                SubmitButton.Should().NotBeNull();
+            }
+        }
+
+        [Then(@"a success message is displayed to the user")]
+        public void ThenASuccessMessageIsDisplayedToTheUser()
+        {
+            var Message = "Eircode successfully submitted";
+
+            var SuccessulSubmissionMsg = WaitForElementToClickable(By.XPath("//div[@data-type='panel'][2]//span")).Text;
+
+            SuccessulSubmissionMsg.Should().Match(Message);
         }
     }
 }

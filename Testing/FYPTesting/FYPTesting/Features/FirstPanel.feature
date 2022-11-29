@@ -1,9 +1,18 @@
 ﻿Feature: First Page
 
+#BUGS
+#In a test set, last test ran will not display anything on page - doesn't happen if only one test in test run.
+
 Background:
 	Given the app is running
 
-#Investigate crashing in ID 2
+Scenario Outline: Objects Exist on Page
+	Then "<Object>" exists
+	Examples:
+	| ID | Object        |
+	| 1  | Eircode Input |
+	| 2  | Submit Button |
+
 Scenario Outline: Eircode Input Validation (Valid)
 	When I input "<Input>" for Eircode
 	And I Press submit
@@ -13,7 +22,6 @@ Scenario Outline: Eircode Input Validation (Valid)
 	| 1  | D24 FT12 | Standard input |
 	| 2  | X99 9999 | Standard input |
 
-#Fix ID 5
 Scenario Outline: Eircode Input Validation (Invalid)
 	When I input "<Input>" for Eircode
 	Then the input is "invalid"
@@ -26,4 +34,7 @@ Scenario Outline: Eircode Input Validation (Invalid)
 	| 5  |            | No chars                                             |
 	| 6  | H91 Y7W‰   | Unicode character (per mille sign)                   |
 
-#ADD MORE TESTS 
+Scenario: Successful Submission Displays Appropriate Message
+		When I input "H91 Y7W9" for Eircode
+		And I Press submit
+		Then a success message is displayed to the user
