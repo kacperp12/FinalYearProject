@@ -1,0 +1,6 @@
+Name: NetLogic
+Type: FolderType
+Children:
+- File: Panel1/Panel1.yaml
+- File: Panel2/Panel2.yaml
+- File: Panel3/Panel3.yaml
