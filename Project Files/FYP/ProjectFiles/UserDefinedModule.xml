@@ -29,6 +29,11 @@
         </TypeMapping>
         <TypeMapping>
             <TargetType>
+                <NodeId namespaceUri="FYP" guid="0eb7770c0d02898950a120a77df4a34e" />
+            </TargetType>
+        </TypeMapping>
+        <TypeMapping>
+            <TargetType>
                 <NodeId namespaceUri="FYP" guid="db3a0d46aa0fd6fa0b137bdde41dfc8b" />
             </TargetType>
         </TypeMapping>

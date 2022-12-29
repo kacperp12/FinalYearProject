@@ -15,6 +15,11 @@ public class MainWindow : FTOptix.UI.Window
 {
 }
 
+[MapType(NamespaceUri = "FYP", Guid = "0eb7770c0d02898950a120a77df4a34e")]
+public class BarcodeScanner : FTOptix.UI.Panel
+{
+}
+
 [MapType(NamespaceUri = "FYP", Guid = "db3a0d46aa0fd6fa0b137bdde41dfc8b")]
 public class Window2 : FTOptix.UI.Window
 {

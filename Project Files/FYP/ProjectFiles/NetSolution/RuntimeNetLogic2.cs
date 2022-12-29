@@ -46,7 +46,7 @@ public class RuntimeNetLogic2 : BaseNetLogic
     public void UpdateGaugeValues(NodeId GaugeNodeId) {
         Gauge = InformationModel.Get<CircularGauge>(GaugeNodeId);
 
-        string WarningZoneToUpdate = (UpdateButton.Parent.BrowseName.Equals("WarningLevelPanel")) ? "Warning Alarm" : "Danger Alarm";
+        string WarningZoneToUpdate = (UpdateButton.Parent.BrowseName.Equals("WarningRectangle")) ? "Warning Alarm" : "Danger Alarm";
 
         Gauge.WarningZones[WarningZoneToUpdate].From = MinValueAsInt;
         Gauge.WarningZones[WarningZoneToUpdate].To = MaxValueAsInt;

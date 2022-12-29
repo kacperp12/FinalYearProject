@@ -666,7 +666,7 @@ Children:
                   - Name: DynamicLink
                     Type: DataBind
                     DataType: NodePath
-                    Value: "../../../../../../../../LEDPanel/Rectangle1/GreenLED@NodeId"
+                    Value: "../../../../../../GreenLED@NodeId"
                     Children:
                     - Name: Mode
                       Type: BaseVariableType
@@ -681,7 +681,7 @@ Children:
                   - Name: DynamicLink
                     Type: DataBind
                     DataType: NodePath
-                    Value: "../../../../../../../../LEDPanel/Rectangle1/OrangeLED@NodeId"
+                    Value: "../../../../../../OrangeLED@NodeId"
                     Children:
                     - Name: Mode
                       Type: BaseVariableType
@@ -696,7 +696,7 @@ Children:
                   - Name: DynamicLink
                     Type: DataBind
                     DataType: NodePath
-                    Value: "../../../../../../../../LEDPanel/Rectangle1/RedLED@NodeId"
+                    Value: "../../../../../../RedLED@NodeId"
                     Children:
                     - Name: Mode
                       Type: BaseVariableType
@@ -779,7 +779,7 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 300.0
-    - Name: Rectangle1
+    - Name: DangerRectangle
       Type: Rectangle
       Children:
       - Name: Width
@@ -1395,7 +1395,7 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 300.0
-    - Name: Rectangle1
+    - Name: WarningRectangle
       Type: Rectangle
       Children:
       - Name: Width
@@ -1983,7 +1983,7 @@ Children:
     DataType: Size
     ModellingRule: Optional
     Value: 400.0
-  - Name: Rectangle1
+  - Name: Rectangle
     Type: Rectangle
     Children:
     - Name: Width
@@ -2734,3 +2734,18 @@ Children:
           DataType: Size
           ModellingRule: Optional
           Value: 0.0
+- Name: BarcodeScanner
+  Id: g=0eb7770c0d02898950a120a77df4a34e
+  Supertype: Panel
+  ReferenceType: HasComponent
+  Children:
+  - Name: Width
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 300.0
+  - Name: Height
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 300.0
