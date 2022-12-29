@@ -20,7 +20,12 @@ public class Window2 : FTOptix.UI.Window
 {
 }
 
-[MapType(NamespaceUri = "FYP", Guid = "d449d8131ba521fc39cefbcb0c82eb9c")]
+[MapType(NamespaceUri = "FYP", Guid = "e8380062c62a9a0e304f49e2ed680deb")]
 public class ButtonPattern : FTOptix.UI.Panel
+{
+}
+
+[MapType(NamespaceUri = "FYP", Guid = "a69dd0123274f6f1d92935411c418fb3")]
+public class InputValidation : FTOptix.UI.Panel
 {
 }
