@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Module version="1">
+    <Name>FYPUserDefinedModule</Name>
+    <Company></Company>
+    <Version>0.0.0</Version>
+    <MinUpgradableVersion>0.0.0</MinUpgradableVersion>
+    <Binding name="Net" />
+
+    <Namespaces/>
+
+    <Dependencies>
+        <Core version="0.0.0" />
+        <Binding version="0.0.0" />
+        <Module name="FTOptix.HMIProject.Net" version="0.0.0" />
+    </Dependencies>
+
+    <Nodes/>
+
+    <TypeMappings>
+        <TypeMapping>
+            <TargetType>
+                <NodeId namespaceUri="FYP" guid="7f8a9d98077a83fd24b6fffef0cd1344" />
+            </TargetType>
+        </TypeMapping>
+        <TypeMapping>
+            <TargetType>
+                <NodeId namespaceUri="FYP" guid="133f33d0c7abd3b2bd1daf81e41c73dd" />
+            </TargetType>
+        </TypeMapping>
+        <TypeMapping>
+            <TargetType>
+                <NodeId namespaceUri="FYP" guid="db3a0d46aa0fd6fa0b137bdde41dfc8b" />
+            </TargetType>
+        </TypeMapping>
+        <TypeMapping>
+            <TargetType>
+                <NodeId namespaceUri="FYP" guid="e8380062c62a9a0e304f49e2ed680deb" />
+            </TargetType>
+        </TypeMapping>
+        <TypeMapping>
+            <TargetType>
+                <NodeId namespaceUri="FYP" guid="a69dd0123274f6f1d92935411c418fb3" />
+            </TargetType>
+        </TypeMapping>
+    </TypeMappings>
+
+    <Behaviors>
+        <Behavior guid="0321c2f3ad53f7ef827736538cea73eb">
+            <Targets>
+                <Target startPriorityAlias="RuntimeMin">
+				     <NodeId namespaceUri="FYP" guid="db3a0d46aa0fd6fa0b137bdde41dfc8b" />
+                </Target>
+            </Targets>
+        </Behavior>
+    </Behaviors>
+</Module>
