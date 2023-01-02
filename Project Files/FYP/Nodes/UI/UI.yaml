@@ -818,5 +818,10 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 0.0
+    - Name: Rotation
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 0.0
 - File: Screens/Screens.yaml
 - File: To be Deleted/To be Deleted.yaml

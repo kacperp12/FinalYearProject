@@ -2,6 +2,7 @@
 
 Background:
 	Given the app is running
+	And the tab "Button Patterns" is open
 
 Scenario Outline: All Objects Exist
 	Then the object "<Object>" Exists

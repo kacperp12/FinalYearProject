@@ -51,6 +51,20 @@ namespace FYPTesting.StepDefinitions
         //    driver = _scenarioContext.Get<SeleniumDriver>("SeleniumDriver").Setup();
         //}
 
+        [Given(@"the tab ""([^""]*)"" is open")]
+        public void GivenTheTabIsOpen(string PanelName)
+        {
+            var PanelNumber = PanelName.ToLower() switch
+            {
+                "input validation" => 1,
+                "button patterns" => 2,
+                _ => throw new ArgumentException("No such button name exists!")
+            };
+
+            var TabButton = WaitForElementToClickable(By.XPath($"//div//button[{PanelNumber}]"));
+            TabButton.Click();
+        }
+
         [When(@"I input ""([^""]*)"" for Eircode")]
         public void WhenIInputForEircode(string Input)
         {

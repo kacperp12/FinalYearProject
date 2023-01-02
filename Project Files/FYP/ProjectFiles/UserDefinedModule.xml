@@ -29,7 +29,12 @@
         </TypeMapping>
         <TypeMapping>
             <TargetType>
-                <NodeId namespaceUri="FYP" guid="0eb7770c0d02898950a120a77df4a34e" />
+                <NodeId namespaceUri="FYP" guid="e8380062c62a9a0e304f49e2ed680deb" />
+            </TargetType>
+        </TypeMapping>
+        <TypeMapping>
+            <TargetType>
+                <NodeId namespaceUri="FYP" guid="a69dd0123274f6f1d92935411c418fb3" />
             </TargetType>
         </TypeMapping>
         <TypeMapping>
@@ -39,12 +44,7 @@
         </TypeMapping>
         <TypeMapping>
             <TargetType>
-                <NodeId namespaceUri="FYP" guid="e8380062c62a9a0e304f49e2ed680deb" />
-            </TargetType>
-        </TypeMapping>
-        <TypeMapping>
-            <TargetType>
-                <NodeId namespaceUri="FYP" guid="a69dd0123274f6f1d92935411c418fb3" />
+                <NodeId namespaceUri="FYP" guid="0eb7770c0d02898950a120a77df4a34e" />
             </TargetType>
         </TypeMapping>
     </TypeMappings>

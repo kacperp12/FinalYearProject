@@ -5,6 +5,7 @@
 
 Background:
 	Given the app is running
+	And the tab "Input Validation" is open
 
 Scenario Outline: Objects Exist on Page
 	Then "<Object>" exists

@@ -98,6 +98,9 @@ namespace FYPTesting.Features
 #line 4
  testRunner.Given("the app is running", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
+#line 5
+ testRunner.And("the tab \"Button Patterns\" is open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
         }
         
         public virtual void AllObjectsExist(string iD, string @object, string[] exampleTags)
@@ -107,7 +110,7 @@ namespace FYPTesting.Features
             argumentsOfScenario.Add("ID", iD);
             argumentsOfScenario.Add("Object", @object);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("All Objects Exist", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 6
+#line 7
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -130,7 +133,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
 this.FeatureBackground();
 #line hidden
-#line 7
+#line 8
  testRunner.Then(string.Format("the object \"{0}\" Exists", @object), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -145,7 +148,7 @@ this.FeatureBackground();
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Object", "WarningMinInput")]
         public virtual void AllObjectsExist_1()
         {
-#line 6
+#line 7
 this.AllObjectsExist("1", "WarningMinInput", ((string[])(null)));
 #line hidden
         }
@@ -158,7 +161,7 @@ this.AllObjectsExist("1", "WarningMinInput", ((string[])(null)));
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Object", "WarningMaxInput")]
         public virtual void AllObjectsExist_2()
         {
-#line 6
+#line 7
 this.AllObjectsExist("2", "WarningMaxInput", ((string[])(null)));
 #line hidden
         }
@@ -171,7 +174,7 @@ this.AllObjectsExist("2", "WarningMaxInput", ((string[])(null)));
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Object", "WarningUpdateButton")]
         public virtual void AllObjectsExist_3()
         {
-#line 6
+#line 7
 this.AllObjectsExist("3", "WarningUpdateButton", ((string[])(null)));
 #line hidden
         }
@@ -184,7 +187,7 @@ this.AllObjectsExist("3", "WarningUpdateButton", ((string[])(null)));
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Object", "DangerMinInput")]
         public virtual void AllObjectsExist_4()
         {
-#line 6
+#line 7
 this.AllObjectsExist("4", "DangerMinInput", ((string[])(null)));
 #line hidden
         }
@@ -197,7 +200,7 @@ this.AllObjectsExist("4", "DangerMinInput", ((string[])(null)));
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Object", "DangerMaxInput")]
         public virtual void AllObjectsExist_5()
         {
-#line 6
+#line 7
 this.AllObjectsExist("5", "DangerMaxInput", ((string[])(null)));
 #line hidden
         }
@@ -210,7 +213,7 @@ this.AllObjectsExist("5", "DangerMaxInput", ((string[])(null)));
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Object", "DangerUpdateButton")]
         public virtual void AllObjectsExist_6()
         {
-#line 6
+#line 7
 this.AllObjectsExist("6", "DangerUpdateButton", ((string[])(null)));
 #line hidden
         }
@@ -223,7 +226,7 @@ this.AllObjectsExist("6", "DangerUpdateButton", ((string[])(null)));
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Object", "Slider")]
         public virtual void AllObjectsExist_7()
         {
-#line 6
+#line 7
 this.AllObjectsExist("7", "Slider", ((string[])(null)));
 #line hidden
         }
@@ -236,7 +239,7 @@ this.AllObjectsExist("7", "Slider", ((string[])(null)));
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Object", "GreenLED")]
         public virtual void AllObjectsExist_8()
         {
-#line 6
+#line 7
 this.AllObjectsExist("8", "GreenLED", ((string[])(null)));
 #line hidden
         }
@@ -249,7 +252,7 @@ this.AllObjectsExist("8", "GreenLED", ((string[])(null)));
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Object", "OrangeLED")]
         public virtual void AllObjectsExist_9()
         {
-#line 6
+#line 7
 this.AllObjectsExist("9", "OrangeLED", ((string[])(null)));
 #line hidden
         }
@@ -262,7 +265,7 @@ this.AllObjectsExist("9", "OrangeLED", ((string[])(null)));
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Object", "RedLED")]
         public virtual void AllObjectsExist_10()
         {
-#line 6
+#line 7
 this.AllObjectsExist("10", "RedLED", ((string[])(null)));
 #line hidden
         }
@@ -275,7 +278,7 @@ this.AllObjectsExist("10", "RedLED", ((string[])(null)));
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Slider Works as Intended", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 21
+#line 22
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -298,10 +301,10 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
 this.FeatureBackground();
 #line hidden
-#line 22
+#line 23
  testRunner.When("I drag the slider to value \"50\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 23
+#line 24
  testRunner.Then("the slider value is set to \"50\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -316,7 +319,7 @@ this.FeatureBackground();
             argumentsOfScenario.Add("SliderValue", sliderValue);
             argumentsOfScenario.Add("LEDType", lEDType);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("LEDs Flash when Expected with Slider Value Adjustment", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 25
+#line 26
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -339,10 +342,10 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
 this.FeatureBackground();
 #line hidden
-#line 26
+#line 27
  testRunner.When(string.Format("I drag the slider to value \"{0}\"", sliderValue), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 27
+#line 28
  testRunner.Then(string.Format("the \"{0}\" LED is flashing", lEDType), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -358,7 +361,7 @@ this.FeatureBackground();
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:LEDType", "Green")]
         public virtual void LEDsFlashWhenExpectedWithSliderValueAdjustment_1()
         {
-#line 25
+#line 26
 this.LEDsFlashWhenExpectedWithSliderValueAdjustment("1", "20", "Green", ((string[])(null)));
 #line hidden
         }
@@ -372,7 +375,7 @@ this.LEDsFlashWhenExpectedWithSliderValueAdjustment("1", "20", "Green", ((string
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:LEDType", "Orange")]
         public virtual void LEDsFlashWhenExpectedWithSliderValueAdjustment_2()
         {
-#line 25
+#line 26
 this.LEDsFlashWhenExpectedWithSliderValueAdjustment("2", "60", "Orange", ((string[])(null)));
 #line hidden
         }
@@ -386,7 +389,7 @@ this.LEDsFlashWhenExpectedWithSliderValueAdjustment("2", "60", "Orange", ((strin
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:LEDType", "Red")]
         public virtual void LEDsFlashWhenExpectedWithSliderValueAdjustment_3()
         {
-#line 25
+#line 26
 this.LEDsFlashWhenExpectedWithSliderValueAdjustment("3", "90", "Red", ((string[])(null)));
 #line hidden
         }
@@ -399,7 +402,7 @@ this.LEDsFlashWhenExpectedWithSliderValueAdjustment("3", "90", "Red", ((string[]
             argumentsOfScenario.Add("MinValue", minValue);
             argumentsOfScenario.Add("MaxValue", maxValue);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Warning Input Box Validation (Valid)", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 34
+#line 35
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -422,13 +425,13 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
 this.FeatureBackground();
 #line hidden
-#line 35
+#line 36
  testRunner.When(string.Format("I input \"{0}\" for \"Warning\" \"Min\" input box", minValue), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 36
+#line 37
  testRunner.And(string.Format("I input \"{0}\" for \"Warning\" \"Max\" input box", maxValue), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
-#line 37
+#line 38
  testRunner.Then("the \"Warning\" update button is clickable", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -444,7 +447,7 @@ this.FeatureBackground();
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:MaxValue", "10")]
         public virtual void WarningInputBoxValidationValid_1()
         {
-#line 34
+#line 35
 this.WarningInputBoxValidationValid("1", "0", "10", ((string[])(null)));
 #line hidden
         }
@@ -458,7 +461,7 @@ this.WarningInputBoxValidationValid("1", "0", "10", ((string[])(null)));
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:MaxValue", "51")]
         public virtual void WarningInputBoxValidationValid_2()
         {
-#line 34
+#line 35
 this.WarningInputBoxValidationValid("2", "50", "51", ((string[])(null)));
 #line hidden
         }
@@ -472,7 +475,7 @@ this.WarningInputBoxValidationValid("2", "50", "51", ((string[])(null)));
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:MaxValue", "100")]
         public virtual void WarningInputBoxValidationValid_3()
         {
-#line 34
+#line 35
 this.WarningInputBoxValidationValid("3", "0", "100", ((string[])(null)));
 #line hidden
         }
@@ -485,7 +488,7 @@ this.WarningInputBoxValidationValid("3", "0", "100", ((string[])(null)));
             argumentsOfScenario.Add("MinValue", minValue);
             argumentsOfScenario.Add("MaxValue", maxValue);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Warning Input Box Validation (Invalid)", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 44
+#line 45
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -508,13 +511,13 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
 this.FeatureBackground();
 #line hidden
-#line 45
+#line 46
  testRunner.When(string.Format("I input \"{0}\" for \"Warning\" \"Min\" input box", minValue), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 46
+#line 47
  testRunner.And(string.Format("I input \"{0}\" for \"Warning\" \"Max\" input box", maxValue), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
-#line 47
+#line 48
  testRunner.Then("the \"Warning\" update button is greyed out", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -530,7 +533,7 @@ this.FeatureBackground();
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:MaxValue", "50")]
         public virtual void WarningInputBoxValidationInvalid_1()
         {
-#line 44
+#line 45
 this.WarningInputBoxValidationInvalid("1", "100", "50", ((string[])(null)));
 #line hidden
         }
@@ -544,7 +547,7 @@ this.WarningInputBoxValidationInvalid("1", "100", "50", ((string[])(null)));
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:MaxValue", "25")]
         public virtual void WarningInputBoxValidationInvalid_2()
         {
-#line 44
+#line 45
 this.WarningInputBoxValidationInvalid("2", "25", "25", ((string[])(null)));
 #line hidden
         }
@@ -558,7 +561,7 @@ this.WarningInputBoxValidationInvalid("2", "25", "25", ((string[])(null)));
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:MaxValue", "5")]
         public virtual void WarningInputBoxValidationInvalid_3()
         {
-#line 44
+#line 45
 this.WarningInputBoxValidationInvalid("3", "-10", "5", ((string[])(null)));
 #line hidden
         }
@@ -572,7 +575,7 @@ this.WarningInputBoxValidationInvalid("3", "-10", "5", ((string[])(null)));
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:MaxValue", "1100")]
         public virtual void WarningInputBoxValidationInvalid_4()
         {
-#line 44
+#line 45
 this.WarningInputBoxValidationInvalid("4", "999", "1100", ((string[])(null)));
 #line hidden
         }
@@ -586,7 +589,7 @@ this.WarningInputBoxValidationInvalid("4", "999", "1100", ((string[])(null)));
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:MaxValue", "5")]
         public virtual void WarningInputBoxValidationInvalid_5()
         {
-#line 44
+#line 45
 this.WarningInputBoxValidationInvalid("5", "abc", "5", ((string[])(null)));
 #line hidden
         }
@@ -600,7 +603,7 @@ this.WarningInputBoxValidationInvalid("5", "abc", "5", ((string[])(null)));
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:MaxValue", ".,$")]
         public virtual void WarningInputBoxValidationInvalid_6()
         {
-#line 44
+#line 45
 this.WarningInputBoxValidationInvalid("6", "-=}{", ".,$", ((string[])(null)));
 #line hidden
         }
@@ -613,7 +616,7 @@ this.WarningInputBoxValidationInvalid("6", "-=}{", ".,$", ((string[])(null)));
             argumentsOfScenario.Add("MinValue", minValue);
             argumentsOfScenario.Add("MaxValue", maxValue);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Danger Input Box Validation (Valid)", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 57
+#line 58
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -636,13 +639,13 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
 this.FeatureBackground();
 #line hidden
-#line 58
+#line 59
  testRunner.When(string.Format("I input \"{0}\" for \"Danger\" \"Min\" input box", minValue), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 59
+#line 60
  testRunner.And(string.Format("I input \"{0}\" for \"Danger\" \"Max\" input box", maxValue), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
-#line 60
+#line 61
  testRunner.Then("the \"Danger\" update button is clickable", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -658,7 +661,7 @@ this.FeatureBackground();
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:MaxValue", "10")]
         public virtual void DangerInputBoxValidationValid_1()
         {
-#line 57
+#line 58
 this.DangerInputBoxValidationValid("1", "0", "10", ((string[])(null)));
 #line hidden
         }
@@ -672,7 +675,7 @@ this.DangerInputBoxValidationValid("1", "0", "10", ((string[])(null)));
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:MaxValue", "51")]
         public virtual void DangerInputBoxValidationValid_2()
         {
-#line 57
+#line 58
 this.DangerInputBoxValidationValid("2", "50", "51", ((string[])(null)));
 #line hidden
         }
@@ -686,7 +689,7 @@ this.DangerInputBoxValidationValid("2", "50", "51", ((string[])(null)));
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:MaxValue", "100")]
         public virtual void DangerInputBoxValidationValid_3()
         {
-#line 57
+#line 58
 this.DangerInputBoxValidationValid("3", "0", "100", ((string[])(null)));
 #line hidden
         }
@@ -699,7 +702,7 @@ this.DangerInputBoxValidationValid("3", "0", "100", ((string[])(null)));
             argumentsOfScenario.Add("MinValue", minValue);
             argumentsOfScenario.Add("MaxValue", maxValue);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Danger Input Box Validation (Invalid)", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 67
+#line 68
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -722,13 +725,13 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
 this.FeatureBackground();
 #line hidden
-#line 68
+#line 69
  testRunner.When(string.Format("I input \"{0}\" for \"Danger\" \"Min\" input box", minValue), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 69
+#line 70
  testRunner.And(string.Format("I input \"{0}\" for \"Danger\" \"Max\" input box", maxValue), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
-#line 70
+#line 71
  testRunner.Then("the \"Danger\" update button is greyed out", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -744,7 +747,7 @@ this.FeatureBackground();
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:MaxValue", "50")]
         public virtual void DangerInputBoxValidationInvalid_1()
         {
-#line 67
+#line 68
 this.DangerInputBoxValidationInvalid("1", "100", "50", ((string[])(null)));
 #line hidden
         }
@@ -758,7 +761,7 @@ this.DangerInputBoxValidationInvalid("1", "100", "50", ((string[])(null)));
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:MaxValue", "25")]
         public virtual void DangerInputBoxValidationInvalid_2()
         {
-#line 67
+#line 68
 this.DangerInputBoxValidationInvalid("2", "25", "25", ((string[])(null)));
 #line hidden
         }
@@ -772,7 +775,7 @@ this.DangerInputBoxValidationInvalid("2", "25", "25", ((string[])(null)));
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:MaxValue", "5")]
         public virtual void DangerInputBoxValidationInvalid_3()
         {
-#line 67
+#line 68
 this.DangerInputBoxValidationInvalid("3", "-10", "5", ((string[])(null)));
 #line hidden
         }
@@ -786,7 +789,7 @@ this.DangerInputBoxValidationInvalid("3", "-10", "5", ((string[])(null)));
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:MaxValue", "1100")]
         public virtual void DangerInputBoxValidationInvalid_4()
         {
-#line 67
+#line 68
 this.DangerInputBoxValidationInvalid("4", "999", "1100", ((string[])(null)));
 #line hidden
         }
@@ -800,7 +803,7 @@ this.DangerInputBoxValidationInvalid("4", "999", "1100", ((string[])(null)));
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:MaxValue", "5")]
         public virtual void DangerInputBoxValidationInvalid_5()
         {
-#line 67
+#line 68
 this.DangerInputBoxValidationInvalid("5", "abc", "5", ((string[])(null)));
 #line hidden
         }
@@ -814,7 +817,7 @@ this.DangerInputBoxValidationInvalid("5", "abc", "5", ((string[])(null)));
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:MaxValue", ".,$")]
         public virtual void DangerInputBoxValidationInvalid_6()
         {
-#line 67
+#line 68
 this.DangerInputBoxValidationInvalid("6", "-=}{", ".,$", ((string[])(null)));
 #line hidden
         }
@@ -828,7 +831,7 @@ this.DangerInputBoxValidationInvalid("6", "-=}{", ".,$", ((string[])(null)));
             argumentsOfScenario.Add("MaxValue", maxValue);
             argumentsOfScenario.Add("InputType", inputType);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Updating Parameters Reflect Changes on Slider", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 80
+#line 81
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -851,16 +854,16 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
 this.FeatureBackground();
 #line hidden
-#line 81
+#line 82
  testRunner.When(string.Format("I input \"{0}\" for \"{1}\" \"Min\" input box", minValue, inputType), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 82
+#line 83
  testRunner.And(string.Format("I input \"{0}\" for \"{1}\" \"Max\" input box", maxValue, inputType), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
-#line 83
+#line 84
  testRunner.And(string.Format("I press the \"{0}\" update button", inputType), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
-#line 84
+#line 85
  testRunner.Then(string.Format("the \"{0}\" slider parameter range is updated accordingly", inputType), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -877,7 +880,7 @@ this.FeatureBackground();
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:InputType", "Warning")]
         public virtual void UpdatingParametersReflectChangesOnSlider_1()
         {
-#line 80
+#line 81
 this.UpdatingParametersReflectChangesOnSlider("1", "10", "40", "Warning", ((string[])(null)));
 #line hidden
         }
@@ -892,7 +895,7 @@ this.UpdatingParametersReflectChangesOnSlider("1", "10", "40", "Warning", ((stri
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:InputType", "Danger")]
         public virtual void UpdatingParametersReflectChangesOnSlider_2()
         {
-#line 80
+#line 81
 this.UpdatingParametersReflectChangesOnSlider("2", "60", "95", "Danger", ((string[])(null)));
 #line hidden
         }
