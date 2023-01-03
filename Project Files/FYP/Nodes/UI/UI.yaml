@@ -42,7 +42,7 @@ Children:
     - Name: ToolTipBackgroundColor
       Type: BaseDataVariableType
       DataType: Color
-      Value: "#ec2929"
+      Value: "#ab2929"
     - Name: ToolTipTextColor
       Type: BaseDataVariableType
       DataType: Color
@@ -99,7 +99,7 @@ Children:
   - Name: FontWeight
     Type: BaseDataVariableType
     DataType: FontWeightEnum
-    Value: 500
+    Value: 700
   - Name: TextColor
     Type: BaseDataVariableType
     DataType: Color

@@ -2451,7 +2451,7 @@ Children:
         Type: BaseDataVariableType
         DataType: Boolean
         ModellingRule: Optional
-        Value: false
+        Value: true
       - Name: MouseClickEventHandler1
         Type: EventHandler
         Children:
@@ -2572,6 +2572,16 @@ Children:
         ModellingRule: Optional
         Value: ""
       - Name: ImageWidth
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: -1.0
+      - Name: ImagePosition
+        Type: BaseDataVariableType
+        DataType: Position
+        ModellingRule: Optional
+        Value: 4
+      - Name: ImageHeight
         Type: BaseDataVariableType
         DataType: Size
         ModellingRule: Optional
