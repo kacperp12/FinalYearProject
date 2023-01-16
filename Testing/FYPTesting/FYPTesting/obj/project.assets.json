@@ -653,28 +653,31 @@
           }
         }
       },
-      "Selenium.Support/4.5.1": {
+      "Selenium.Support/4.7.0": {
         "type": "package",
         "dependencies": {
-          "Selenium.WebDriver": "4.5.1"
+          "Selenium.WebDriver": "4.7.0"
         },
         "compile": {
-          "lib/net5.0/WebDriver.Support.dll": {}
+          "lib/net6.0/WebDriver.Support.dll": {}
         },
         "runtime": {
-          "lib/net5.0/WebDriver.Support.dll": {}
+          "lib/net6.0/WebDriver.Support.dll": {}
         }
       },
-      "Selenium.WebDriver/4.5.1": {
+      "Selenium.WebDriver/4.7.0": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "13.0.1"
         },
         "compile": {
-          "lib/net5.0/WebDriver.dll": {}
+          "lib/net6.0/WebDriver.dll": {}
         },
         "runtime": {
-          "lib/net5.0/WebDriver.dll": {}
+          "lib/net6.0/WebDriver.dll": {}
+        },
+        "build": {
+          "build/Selenium.WebDriver.targets": {}
         }
       },
       "Selenium.WebDriver.ChromeDriver/108.0.5359.7100": {
@@ -683,7 +686,7 @@
           "build/Selenium.WebDriver.ChromeDriver.targets": {}
         }
       },
-      "SpecFlow/3.9.40": {
+      "SpecFlow/3.9.74": {
         "type": "package",
         "dependencies": {
           "BoDi": "1.5.0",
@@ -713,12 +716,12 @@
           "lib/netstandard2.0/SpecFlow.Internal.Json.dll": {}
         }
       },
-      "SpecFlow.MsTest/3.9.40": {
+      "SpecFlow.MsTest/3.9.74": {
         "type": "package",
         "dependencies": {
           "MSTest.TestFramework": "2.1.2",
-          "SpecFlow": "[3.9.40]",
-          "SpecFlow.Tools.MsBuild.Generation": "[3.9.40]"
+          "SpecFlow": "[3.9.74]",
+          "SpecFlow.Tools.MsBuild.Generation": "[3.9.74]"
         },
         "compile": {
           "lib/net6.0/TechTalk.SpecFlow.MSTest.SpecFlowPlugin.dll": {}
@@ -751,10 +754,10 @@
           "build/SpecFlow.Plus.LivingDocPlugin.targets": {}
         }
       },
-      "SpecFlow.Tools.MsBuild.Generation/3.9.40": {
+      "SpecFlow.Tools.MsBuild.Generation/3.9.74": {
         "type": "package",
         "dependencies": {
-          "SpecFlow": "[3.9.40]"
+          "SpecFlow": "[3.9.74]"
         },
         "build": {
           "build/SpecFlow.Tools.MsBuild.Generation.props": {},
@@ -3199,10 +3202,10 @@
         "runtimes/ubuntu.16.10-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
       ]
     },
-    "Selenium.Support/4.5.1": {
-      "sha512": "H4PcRAZCORFuQJIiyB/gozGOiQGsPQUq0yWT4t2rmx1N0Hzo7OD9gmmhDTs2xvMMILnRfEmUbvXTStlHdmUDZQ==",
+    "Selenium.Support/4.7.0": {
+      "sha512": "Fy5AIybjkJhVwe2VY2JSYBQeEV0E+HfG11wmkrC1+ICBBWBkt4Ax/oKH+oQ3kTgFCjDY2wAM4LCvMLDxRXi+ig==",
       "type": "package",
-      "path": "selenium.support/4.5.1",
+      "path": "selenium.support/4.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3212,28 +3215,34 @@
         "lib/net47/WebDriver.Support.dll",
         "lib/net48/WebDriver.Support.dll",
         "lib/net5.0/WebDriver.Support.dll",
+        "lib/net6.0/WebDriver.Support.dll",
         "lib/netstandard2.0/WebDriver.Support.dll",
         "lib/netstandard2.1/WebDriver.Support.dll",
-        "selenium.support.4.5.1.nupkg.sha512",
+        "selenium.support.4.7.0.nupkg.sha512",
         "selenium.support.nuspec"
       ]
     },
-    "Selenium.WebDriver/4.5.1": {
-      "sha512": "ztu9Qv2n5/NkqPs0MQ3nojMJuW2PVHrAKDukmT77HbYAGhZI370Hp0EJNqyucJuud937Lr/qvXsoOtLZ18VFnw==",
+    "Selenium.WebDriver/4.7.0": {
+      "sha512": "WNGX6JxjBS5f79PQnrB4oO+5U83f8tZfND+rqX2YJVHPdv3xS/zZwljWqGu5UDhluo3kEuuT+DuGEZW8/+9fOA==",
       "type": "package",
-      "path": "selenium.webdriver/4.5.1",
+      "path": "selenium.webdriver/4.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "build/Selenium.WebDriver.targets",
         "images/icon.png",
         "lib/net45/WebDriver.dll",
         "lib/net46/WebDriver.dll",
         "lib/net47/WebDriver.dll",
         "lib/net48/WebDriver.dll",
         "lib/net5.0/WebDriver.dll",
+        "lib/net6.0/WebDriver.dll",
         "lib/netstandard2.0/WebDriver.dll",
         "lib/netstandard2.1/WebDriver.dll",
-        "selenium.webdriver.4.5.1.nupkg.sha512",
+        "manager/linux/selenium-manager",
+        "manager/macos/selenium-manager",
+        "manager/windows/selenium-manager.exe",
+        "selenium.webdriver.4.7.0.nupkg.sha512",
         "selenium.webdriver.nuspec"
       ]
     },
@@ -3256,10 +3265,10 @@
         "selenium.webdriver.chromedriver.nuspec"
       ]
     },
-    "SpecFlow/3.9.40": {
-      "sha512": "ru7twstJSKrTv3XfcxyttzrdZ/FvXOF5cYN/x/2js755wVk1zpSPUPa/ml3lSZmPNkS5OAOuSt1JLEa5hhDhdw==",
+    "SpecFlow/3.9.74": {
+      "sha512": "n6kcg9ZeQWxqJFoT23SsFT89U1QQNwvcN9pAX5alB6ZPr6K0p5D5nGIJ1PZsSaFaRFutiwQ+DicmxBCPAZVYIA==",
       "type": "package",
-      "path": "specflow/3.9.40",
+      "path": "specflow/3.9.74",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3278,7 +3287,7 @@
         "lib/netstandard2.0/TechTalk.SpecFlow.dll",
         "lib/netstandard2.0/TechTalk.SpecFlow.pdb",
         "lib/netstandard2.0/TechTalk.SpecFlow.xml",
-        "specflow.3.9.40.nupkg.sha512",
+        "specflow.3.9.74.nupkg.sha512",
         "specflow.nuspec"
       ]
     },
@@ -3296,10 +3305,10 @@
         "specflow.internal.json.nuspec"
       ]
     },
-    "SpecFlow.MsTest/3.9.40": {
-      "sha512": "+JHzaKTpnGp+4rn+ynkatWtMocPm2BfwzZ1L3C1r6zD6bAnt51sAD/SWauZdnAzykRgHwJRp86ouJW4uS7sDCg==",
+    "SpecFlow.MsTest/3.9.74": {
+      "sha512": "HRRPSZOOBNHtOG9bWhmYGp8trRr715rVTr0bJlq6qYhgi/xqfnx0OEC9H68u3gshGbCni7TBbg3sPhKlNaxpgQ==",
       "type": "package",
-      "path": "specflow.mstest/3.9.40",
+      "path": "specflow.mstest/3.9.74",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3327,7 +3336,7 @@
         "lib/net6.0/TechTalk.SpecFlow.MSTest.SpecFlowPlugin.pdb",
         "lib/netstandard2.0/TechTalk.SpecFlow.MSTest.SpecFlowPlugin.dll",
         "lib/netstandard2.0/TechTalk.SpecFlow.MSTest.SpecFlowPlugin.pdb",
-        "specflow.mstest.3.9.40.nupkg.sha512",
+        "specflow.mstest.3.9.74.nupkg.sha512",
         "specflow.mstest.nuspec"
       ]
     },
@@ -3349,10 +3358,10 @@
         "specflow.plus.livingdocplugin.nuspec"
       ]
     },
-    "SpecFlow.Tools.MsBuild.Generation/3.9.40": {
-      "sha512": "DFClKzQH0ijUBiZNpas8sQ66EdGwVSS18UtC1hVIM7PiT0F+xzKs4VX5hsz+ZY/RKyQEfY9HELUAC8AoZicxSg==",
+    "SpecFlow.Tools.MsBuild.Generation/3.9.74": {
+      "sha512": "I/9OvmKOohJqIUNJ0xGYJCWfL6WKDaes8OoOAD/2yhGX+tzC5ofs9yqkP9Cu/xfnIx+11IR3pZs7YhBhGAcgWQ==",
       "type": "package",
-      "path": "specflow.tools.msbuild.generation/3.9.40",
+      "path": "specflow.tools.msbuild.generation/3.9.74",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3369,7 +3378,7 @@
         "licenses/Gherkin-LICENSE-MIT.txt",
         "licenses/Newtonsoft.Json-LICENSE-MIT.md",
         "licenses/System.ValueTuple-LICENSE-MIT.txt",
-        "specflow.tools.msbuild.generation.3.9.40.nupkg.sha512",
+        "specflow.tools.msbuild.generation.3.9.74.nupkg.sha512",
         "specflow.tools.msbuild.generation.nuspec",
         "tasks/net461/BoDi.dll",
         "tasks/net461/Gherkin.dll",
@@ -6893,10 +6902,10 @@
       "MSTest.TestAdapter >= 2.2.7",
       "MSTest.TestFramework >= 2.2.7",
       "Microsoft.NET.Test.Sdk >= 17.0.0",
-      "Selenium.Support >= 4.5.1",
-      "Selenium.WebDriver >= 4.5.1",
+      "Selenium.Support >= 4.7.0",
+      "Selenium.WebDriver >= 4.7.0",
       "Selenium.WebDriver.ChromeDriver >= 108.0.5359.7100",
-      "SpecFlow.MsTest >= 3.9.40",
+      "SpecFlow.MsTest >= 3.9.74",
       "SpecFlow.Plus.LivingDocPlugin >= 3.9.57"
     ]
   },
@@ -6961,11 +6970,11 @@
           },
           "Selenium.Support": {
             "target": "Package",
-            "version": "[4.5.1, )"
+            "version": "[4.7.0, )"
           },
           "Selenium.WebDriver": {
             "target": "Package",
-            "version": "[4.5.1, )"
+            "version": "[4.7.0, )"
           },
           "Selenium.WebDriver.ChromeDriver": {
             "target": "Package",
@@ -6973,7 +6982,7 @@
           },
           "SpecFlow.MsTest": {
             "target": "Package",
-            "version": "[3.9.40, )"
+            "version": "[3.9.74, )"
           },
           "SpecFlow.Plus.LivingDocPlugin": {
             "target": "Package",

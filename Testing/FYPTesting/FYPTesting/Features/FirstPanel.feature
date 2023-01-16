@@ -1,11 +1,8 @@
 ﻿Feature: First Page
 
-#BUGS
-#In a test set, last test ran will not display anything on page - doesn't happen if only one test in test run.
-
 Background:
-	Given the app is running
-	And the tab "Input Validation" is open
+	Given the content is refreshed
+	Given the tab "Input Validation" is open
 
 Scenario Outline: Objects Exist on Page
 	Then "<Object>" exists

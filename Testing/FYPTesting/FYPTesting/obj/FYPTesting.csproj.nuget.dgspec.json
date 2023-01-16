@@ -62,11 +62,11 @@
             },
             "Selenium.Support": {
               "target": "Package",
-              "version": "[4.5.1, )"
+              "version": "[4.7.0, )"
             },
             "Selenium.WebDriver": {
               "target": "Package",
-              "version": "[4.5.1, )"
+              "version": "[4.7.0, )"
             },
             "Selenium.WebDriver.ChromeDriver": {
               "target": "Package",
@@ -74,7 +74,7 @@
             },
             "SpecFlow.MsTest": {
               "target": "Package",
-              "version": "[3.9.40, )"
+              "version": "[3.9.74, )"
             },
             "SpecFlow.Plus.LivingDocPlugin": {
               "target": "Package",

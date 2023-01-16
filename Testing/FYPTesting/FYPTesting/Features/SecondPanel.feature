@@ -1,11 +1,11 @@
 ﻿Feature: Second Page
 
 Background:
-	Given the app is running
-	And the tab "Button Patterns" is open
+	Given the content is refreshed
+	Given the tab "Button Patterns" is open
 
 Scenario Outline: All Objects Exist
-	Then the object "<Object>" Exists
+	Then "<Object>" exists
 	Examples:
 	| ID | Object              |
 	| 1  | WarningMinInput     |

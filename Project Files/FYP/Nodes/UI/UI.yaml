@@ -104,15 +104,6 @@ Children:
     Type: BaseDataVariableType
     DataType: Color
     Value: "#000000"
-  - Name: "Don't Delete"
-    Type: NodePointer
-    DataType: NodeId
-    Value: {"IdType":0,"Id":0,"Namespace":-1}
-    Children:
-    - Name: Kind
-      Type: PropertyType
-      DataType: NodeId
-      Value: {"IdType":0,"Id":0,"Namespace":-1}
   - Name: AccentTextColor
     Type: BaseDataVariableType
     DataType: Color
