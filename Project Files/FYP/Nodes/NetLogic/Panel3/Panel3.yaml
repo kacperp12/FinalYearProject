@@ -1,11 +1,12 @@
 Name: Panel3
 Type: FolderType
 Children:
-- Name: RuntimeNetLogic3
+- Name: BarcodeGen
+  Id: g=00e12b727844ca716c455e088be20509
   Type: NetLogic
   Children:
   - Class: Method
-    Name: AdjustValueOfLabel
+    Name: GenerateBarcode
     Children:
     - Name: ns=0;InputArguments
       Type: BaseVariableType
@@ -13,4 +14,4 @@ Children:
       ReferenceType: HasProperty
       ValueRank: OneDimension
       ArrayDimensions: [0]
-      Value: [{"TypeId":{"Id":296},"Body":{"Name":"labelNode","DataType":{"Id":17},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"panelNode","DataType":{"Id":17},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+      Value: [{"TypeId":{"Id":296},"Body":{"Name":"TextboxId","DataType":{"Id":17},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"ImageId","DataType":{"Id":17},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"LabelId","DataType":{"Id":17},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]

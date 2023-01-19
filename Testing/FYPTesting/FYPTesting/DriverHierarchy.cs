@@ -56,7 +56,8 @@ namespace FYPTesting
             }
             catch (NoSuchElementException)
             {
-                Console.WriteLine("Element with locator: '" + elementLocator + "' was not found in current context page.");
+                //Console.WriteLine("Element with locator: '" + elementLocator + "' was not found in current context page.");
+                //Test.context - Research this.
                 throw;
             }
         }

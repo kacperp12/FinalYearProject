@@ -13,6 +13,9 @@ using FTOptix.Core;
 using System.Linq;
 using FTOptix.AuditSigning;
 using FTOptix.Alarm;
+using FTOptix.SQLiteStore;
+using FTOptix.Store;
+using FTOptix.ODBCStore;
 #endregion
 
 public class RuntimeNetLogic2 : BaseNetLogic

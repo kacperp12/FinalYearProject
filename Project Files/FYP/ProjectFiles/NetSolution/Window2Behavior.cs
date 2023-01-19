@@ -11,6 +11,9 @@ using FTOptix.NetLogic;
 using FTOptix.CoreBase;
 using FTOptix.Core;
 using FTOptix.Alarm;
+using FTOptix.SQLiteStore;
+using FTOptix.Store;
+using FTOptix.ODBCStore;
 #endregion
 
 [CustomBehavior]

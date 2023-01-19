@@ -14,5 +14,19 @@
   <PropertyGroup>
     <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>None</ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
   </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Win32.SystemEvents">
+      <HintPath>..\Microsoft.Win32.SystemEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing.Common">
+      <HintPath>..\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing">
+      <HintPath>..\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="ZXing.Windows.Compatibility">
+      <HintPath>..\ZXing.Windows.Compatibility.dll</HintPath>
+    </Reference>
+  </ItemGroup>
   <Import Project="FYP.references"/>
 </Project>

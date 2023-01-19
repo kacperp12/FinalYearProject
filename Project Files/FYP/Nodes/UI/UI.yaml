@@ -681,12 +681,12 @@ Children:
     Type: BaseDataVariableType
     DataType: Size
     ModellingRule: Optional
-    Value: 400.0
+    Value: 550.0
   - Name: Height
     Type: BaseDataVariableType
     DataType: Size
     ModellingRule: Optional
-    Value: 450.0
+    Value: 600.0
   - Name: EircodeValidation
     Type: NetLogic
     Children:
@@ -754,11 +754,43 @@ Children:
         - Name: Title
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"LocaleId":"en-US","Text":"Barcode Scanner"}
+          Value: {"LocaleId":"en-US","Text":"Barcode Generator"}
         - Name: Panel
           Type: NodePointer
           DataType: NodeId
           Value: {"IdType":2,"Id":"0eb7770c0d02898950a120a77df4a34e","Namespace":16}
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: {"Id":71,"Namespace":5}
+      - Name: Panel4
+        Type: NavigationPanelItem
+        Children:
+        - Name: Title
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"LocaleId":"en-US","Text":"Vector Graphics"}
+        - Name: Panel
+          Type: NodePointer
+          DataType: NodeId
+          Value: {"IdType":2,"Id":"f2c510b95e8f950baa02347c041aca4a","Namespace":16}
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: {"Id":71,"Namespace":5}
+      - Name: Panel5
+        Type: NavigationPanelItem
+        Children:
+        - Name: Title
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"LocaleId":"en-US","Text":"Reusable Graphics"}
+        - Name: Panel
+          Type: NodePointer
+          DataType: NodeId
+          Value: {"IdType":0,"Id":0,"Namespace":-1}
           Children:
           - Name: Kind
             Type: PropertyType
@@ -778,12 +810,12 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 400.0
+      Value: 550.0
     - Name: Height
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 450.0
+      Value: 600.0
     - Name: HorizontalAlignment
       Type: BaseVariableType
       DataType: HorizontalAlignment

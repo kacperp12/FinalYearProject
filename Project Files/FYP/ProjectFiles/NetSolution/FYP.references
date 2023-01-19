@@ -140,5 +140,9 @@
       <HintPath>C:/Program Files/Rockwell Automation/FactoryTalk Optix/Studio/Bindings/Net/10.0.0.0/Win32_x64/UAManagedCoreCommon.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="IronBarCode">
+      <HintPath>C:/Program Files/Rockwell Automation/FactoryTalk Optix/Studio/Bindings/Net/10.0.0.0/Win32_x64/netstandard2.0/IronBarCode.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
 </Project>
