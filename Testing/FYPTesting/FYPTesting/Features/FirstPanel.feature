@@ -1,4 +1,4 @@
-﻿Feature: First Page
+﻿Feature: First Panel
 
 Background:
 	Given the content is refreshed

@@ -1,4 +1,4 @@
-﻿Feature: Second Page
+﻿Feature: Second Panel
 
 Background:
 	Given the content is refreshed

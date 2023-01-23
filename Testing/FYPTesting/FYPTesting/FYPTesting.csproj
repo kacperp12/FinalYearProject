@@ -24,12 +24,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Features\ThirdPanel.feature.cs">
+      <DependentUpon>ThirdPanel.feature</DependentUpon>
+    </Compile>
     <Compile Update="Features\SecondPanel.feature.cs">
       <DependentUpon>SecondPanel.feature</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
+    <SpecFlowFeatureFiles Update="Features\ThirdPanel.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
     <SpecFlowFeatureFiles Update="Features\SecondPanel.feature">
       <Visible>$(UsingMicrosoftNETSdk)</Visible>
       <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>

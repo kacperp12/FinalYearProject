@@ -38,6 +38,7 @@ namespace FYPTesting.StepDefinitions
             {
                 "input validation" => 1,
                 "button patterns" => 2,
+                "barcode generator" => 3,
                 _ => throw new ArgumentException("No such button name exists!")
             };
 
@@ -103,6 +104,9 @@ namespace FYPTesting.StepDefinitions
                 "GreenLED" => "//div[@data-type='led'][1]",
                 "OrangeLED" => "//div[@data-type='led'][2]",
                 "RedLED" => "//div[@data-type='led'][3]",
+                "Barcode Base Image" => "//div[@data-type='rectangle']//div//div[3]//img",
+                "Barcode Input Field" => "(//div[@data-type='rectangle']//div)[2]//input",
+                "Barcode Submit Button" => "(//div[@data-type='rectangle']//div)[6]//div",
                 _ => throw new Exception("No such element exists!")
             };
 

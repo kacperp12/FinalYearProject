@@ -23,14 +23,18 @@ public class BarcodeGen : BaseNetLogic
 {
     TextBox BarcodeTextbox;
     Image ImageForBarcode;
-    Label BarcodeText;
+    Label BarcodeText, ErrorLabelText;
+    Button SubmitButton;
     static string filePath = "";
 
     [ExportMethod]
-    public void GenerateBarcode(NodeId TextboxId, NodeId ImageId, NodeId LabelId) {
+    public void GenerateBarcode(NodeId TextboxId, NodeId ImageId, NodeId LabelId, NodeId Label2Id) {
         BarcodeTextbox = InformationModel.Get<TextBox>(TextboxId);
         ImageForBarcode = InformationModel.Get<Image>(ImageId);
         BarcodeText = InformationModel.Get<Label>(LabelId);
+        ErrorLabelText = InformationModel.Get<Label>(Label2Id);
+
+        ErrorLabelText.Text = "";
 
         //Ensures each svg file is deleted once it is redundant
         //Prevents a build up of svg files
@@ -70,5 +74,24 @@ public class BarcodeGen : BaseNetLogic
         
         ImageForBarcode.Path = filePath;
         BarcodeText.Text = BarcodeTextbox.Text;
+    }
+
+    [ExportMethod]
+    public void InputChecker(NodeId TextboxId, NodeId Label2Id, NodeId SubmitButtonId) {
+        BarcodeTextbox = InformationModel.Get<TextBox>(TextboxId);
+        ErrorLabelText = InformationModel.Get<Label>(Label2Id);
+        SubmitButton = InformationModel.Get<Button>(SubmitButtonId);
+
+        if(BarcodeTextbox.Text.Length > 15) {
+            BarcodeTextbox.BorderColor = new Color(255, 255, 0, 0);
+            ErrorLabelText.TextColor = new Color(255, 255, 0, 0);
+            ErrorLabelText.Text = "Please check your input! (15 chars max)";
+            SubmitButton.Enabled = false;
+        }
+        else {
+            BarcodeTextbox.BorderColor = new Color(255, 0, 255, 0);
+            ErrorLabelText.Text = "";
+            SubmitButton.Enabled = true;
+        }
     }
 }

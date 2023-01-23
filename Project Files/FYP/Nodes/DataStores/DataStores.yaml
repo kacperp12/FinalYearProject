@@ -2,7 +2,6 @@ Name: DataStores
 Type: FolderType
 Children:
 - Name: ShapeDatabase
-  Id: g=3fa6e6e7e9f650537c6a84b4fcfbaba6
   Type: SQLiteStore
   Children:
   - Name: Tables
@@ -26,14 +25,14 @@ Children:
       - Name: Columns
         Type: BaseObjectType
         Children:
-        - Name: Circle
+        - Name: Shape1
           Type: StoreColumn
           DataType: String
-          Value: ""
-        - Name: Rectangle
+          Value: "Triangle"
+        - Name: Shape2
           Type: StoreColumn
           DataType: String
-          Value: ""
+          Value: "Rectangle"
       - Name: RecordLimit
         Type: BaseDataVariableType
         DataType: UInt32
