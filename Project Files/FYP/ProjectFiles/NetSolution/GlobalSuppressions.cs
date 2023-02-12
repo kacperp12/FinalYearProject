@@ -7,5 +7,8 @@ using System.Diagnostics.CodeAnalysis;
 using FTOptix.SQLiteStore;
 using FTOptix.Store;
 using FTOptix.ODBCStore;
+using FTOptix.Recipe;
+using FTOptix.Datalogger;
+using FTOptix.EventLogger;
 
 [assembly: SuppressMessage("Interoperability", "CA1416:Validate platform compatibility", Justification = "<Pending>", Scope = "member", Target = "~M:BarcodeGen.GenerateBarcode(UAManagedCore.NodeId,UAManagedCore.NodeId)")]

@@ -1,0 +1,19 @@
+Name: Panel5
+Type: FolderType
+Children:
+- Name: ReusableGraphicsLogic
+  Id: g=fa6d4d23948a10a943778c3bd23b8ae2
+  Type: NetLogic
+  Children:
+  - Class: Method
+    Name: VariableInputValidation
+  - Class: Method
+    Name: EnableUserInput
+    Children:
+    - Name: ns=0;InputArguments
+      Type: BaseVariableType
+      DataType: Argument
+      ReferenceType: HasProperty
+      ValueRank: OneDimension
+      ArrayDimensions: [0]
+      Value: [{"TypeId":{"Id":296},"Body":{"Name":"inputBox","DataType":{"Id":17},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]

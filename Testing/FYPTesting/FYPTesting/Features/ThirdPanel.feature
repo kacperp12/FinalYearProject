@@ -18,13 +18,13 @@ Scenario Outline: Barcode Input Field Validation (Valid)
 	When I input "<Input>" into the input field
 	And I Press the submit button
 	Then a barcode for this input is generated
-	And the input <"Input"> is displayed under the generated barcode
+	And the input "<Input>" is displayed under the generated barcode
 	Examples:
 	| ID | Input            | Comment                 |
 	| 1  | H                | Smallest input possible |
 	| 2  | 1234567890qwert  | Longest input possible  |
 	| 3  | BARCODE          | Regular input           |
-	| 4  | qwerty-=[]#;'./, | Special chars           |
+	| 4  | qwerty-=[]#;' | Special chars           |
 
 
 Scenario: Input Field Input Too Long (>15 chars)

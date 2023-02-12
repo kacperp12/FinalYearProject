@@ -30,12 +30,22 @@ public class InputValidation : FTOptix.UI.Panel
 {
 }
 
+[MapType(NamespaceUri = "FYP", Guid = "0eb7770c0d02898950a120a77df4a34e")]
+public class BarcodeGenerator : FTOptix.UI.Panel
+{
+}
+
 [MapType(NamespaceUri = "FYP", Guid = "db3a0d46aa0fd6fa0b137bdde41dfc8b")]
 public class Window2 : FTOptix.UI.Window
 {
 }
 
-[MapType(NamespaceUri = "FYP", Guid = "0eb7770c0d02898950a120a77df4a34e")]
-public class BarcodeGenerator : FTOptix.UI.Panel
+[MapType(NamespaceUri = "FYP", Guid = "5872f64dd3d6579f8416a14ee1b6882a")]
+public class ReusablePanel : FTOptix.UI.Panel
+{
+}
+
+[MapType(NamespaceUri = "FYP", Guid = "bd84dd270f8421ca57636a649b533f80")]
+public class ReusableGraphics : FTOptix.UI.Panel
 {
 }

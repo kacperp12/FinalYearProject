@@ -16,6 +16,9 @@ using FTOptix.Alarm;
 using FTOptix.SQLiteStore;
 using FTOptix.Store;
 using FTOptix.ODBCStore;
+using FTOptix.Recipe;
+using FTOptix.Datalogger;
+using FTOptix.EventLogger;
 #endregion
 
 public class RuntimeNetLogic2 : BaseNetLogic

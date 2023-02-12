@@ -80,5 +80,13 @@ Project:
    Uri: 'urn:FTOptix:SQLiteStore:Net'
    Module: FTOptix.SQLiteStore.Net
    Version: 2.1
+  21:
+   Uri: 'urn:FTOptix:Datalogger'
+   Module: FTOptix.Datalogger
+   Version: 13.0
+  22:
+   Uri: 'urn:FTOptix:Datalogger:Net'
+   Module: FTOptix.Datalogger.Net
+   Version: 10.0
  Nodes:
  - File: Nodes/FYP.yaml

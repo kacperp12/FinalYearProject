@@ -75,6 +75,12 @@ namespace FYPTesting
             }
         }
 
+        public int GetElementCount(String XPath)
+        {
+            var el = WaitForElementToClickable(By.XPath(XPath));
+            return driver.FindElements(By.XPath(XPath)).Count;
+        }
+
         public Actions CreateAction()
         {
             Actions builder = new Actions(driver);

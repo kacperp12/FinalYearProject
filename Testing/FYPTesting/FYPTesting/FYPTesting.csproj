@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <SpecFlowObsoleteCodeBehindFiles Remove="Features\FirstPanel - Copy.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\ThirdPanel - Copy.feature.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,6 +25,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Features\FourthPanel.feature.cs">
+      <DependentUpon>FourthPanel.feature</DependentUpon>
+    </Compile>
     <Compile Update="Features\ThirdPanel.feature.cs">
       <DependentUpon>ThirdPanel.feature</DependentUpon>
     </Compile>
@@ -33,6 +37,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <SpecFlowFeatureFiles Update="Features\FourthPanel.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
     <SpecFlowFeatureFiles Update="Features\ThirdPanel.feature">
       <Visible>$(UsingMicrosoftNETSdk)</Visible>
       <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg">>
+  <line id="Edge 1" x1="100" x2="175" y1="20" y2="100" stroke="black" stroke-width="5"/>
+  <line id="Edge 2" x1="100" x2="25" y1="20" y2="100" stroke="black" stroke-width="5"/>
+  <line id="Edge 3" x1="25" x2="175" y1="100" y2="100" stroke="black" stroke-width="5"/>
+</svg>

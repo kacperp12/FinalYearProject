@@ -1,13 +1,14 @@
 Name: DataStores
 Type: FolderType
 Children:
-- Name: ShapeDatabase
+- Name: EmbeddedDatabase1
+  Id: g=baf1c1cfac05eadfd386b0287232c428
   Type: SQLiteStore
   Children:
   - Name: Tables
     Type: BaseObjectType
     Children:
-    - Name: Shapes
+    - Name: DataLogger1
       Type: SQLiteStoreTable
       Children:
       - Class: Reference
@@ -25,18 +26,14 @@ Children:
       - Name: Columns
         Type: BaseObjectType
         Children:
-        - Name: Shape1
+        - Name: Timestamp
+          Type: StoreColumn
+          DataType: UtcTime
+          Value: "1601-01-01T00:00:00.0000000"
+        - Name: Variable1
           Type: StoreColumn
           DataType: String
-          Value: "Triangle"
-        - Name: Shape2
-          Type: StoreColumn
-          DataType: String
-          Value: "Rectangle"
-      - Name: RecordLimit
-        Type: BaseDataVariableType
-        DataType: UInt32
-        Value: 0
+          Value: ""
   - Class: Reference
     Target: ns=19;i=30
     Direction: Forward
@@ -98,3 +95,7 @@ Children:
   - Class: Reference
     Target: ns=17;i=59
     Direction: Forward
+  - Name: InMemory
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false

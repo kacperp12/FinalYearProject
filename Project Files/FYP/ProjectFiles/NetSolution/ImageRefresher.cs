@@ -10,6 +10,9 @@ using System.Threading;
 using FTOptix.SQLiteStore;
 using FTOptix.Store;
 using FTOptix.ODBCStore;
+using FTOptix.Recipe;
+using FTOptix.Datalogger;
+using FTOptix.EventLogger;
 #endregion
 
 public class ImageRefresher : BaseNetLogic

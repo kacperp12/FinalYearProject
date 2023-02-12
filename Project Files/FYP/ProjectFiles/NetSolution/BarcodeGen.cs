@@ -17,6 +17,10 @@ using System.Linq;
 using FTOptix.SQLiteStore;
 using FTOptix.Store;
 using FTOptix.ODBCStore;
+using System.Xml;
+using FTOptix.Recipe;
+using FTOptix.Datalogger;
+using FTOptix.EventLogger;
 #endregion
 
 public class BarcodeGen : BaseNetLogic
@@ -53,8 +57,9 @@ public class BarcodeGen : BaseNetLogic
                       .Select(s => s[random.Next(s.Length)])
                       .ToArray());
 
+        var projectRelativeResourceUri = ResourceUri.FromProjectRelativePath($"{result}.svg");
+
         string Data = BarcodeTextbox.Text;
-        filePath = $"C:\\Users\\Kacper\\OneDrive - National University of Ireland, Galway\\4th Year College\\Final Year Project\\Project Files\\FYP\\ProjectFiles\\NetSolution\\{result}.svg";
 
         if(File.Exists(filePath))
             File.Delete(filePath);
@@ -65,14 +70,35 @@ public class BarcodeGen : BaseNetLogic
             Options = new EncodingOptions
             {
                 Width = 300,
-                Height = 150
+                Height = 150,
+                PureBarcode = true
             }
         };
 
         var bt = barcodeWriter.Write(Data);
-        File.WriteAllText(filePath, bt.ToString());
+        File.WriteAllText(projectRelativeResourceUri.Uri, bt.ToString());
+
+
+        // Move to separate function
+        XmlDocument svgDoc = new XmlDocument();
+        svgDoc.Load(projectRelativeResourceUri.Uri);
+
+        foreach (XmlNode childNode in svgDoc.ChildNodes)
+        {
+            if (childNode.Name == "svg")
+            {
+                if(childNode.Attributes != null) {
+                    XmlAttribute fillAttribute = childNode.Attributes["style"];
+                    fillAttribute.Value = "background-color:rgb(192,232,251);background-color:rgba(192, 232, 251, 1)";
+                    svgDoc.Save(projectRelativeResourceUri.Uri);
+                    break;
+                }
+            }
+        }
+
+        svgDoc.Save(projectRelativeResourceUri.Uri);
         
-        ImageForBarcode.Path = filePath;
+        ImageForBarcode.Path = projectRelativeResourceUri;
         BarcodeText.Text = BarcodeTextbox.Text;
     }
 

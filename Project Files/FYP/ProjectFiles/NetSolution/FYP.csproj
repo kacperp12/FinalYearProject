@@ -15,6 +15,9 @@
     <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>None</ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="SVG" Version="3.4.4"/>
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="Microsoft.Win32.SystemEvents">
       <HintPath>..\Microsoft.Win32.SystemEvents.dll</HintPath>
     </Reference>

@@ -790,7 +790,7 @@ Children:
         - Name: Panel
           Type: NodePointer
           DataType: NodeId
-          Value: {"IdType":0,"Id":0,"Namespace":-1}
+          Value: {"IdType":2,"Id":"bd84dd270f8421ca57636a649b533f80","Namespace":16}
           Children:
           - Name: Kind
             Type: PropertyType

@@ -1,0 +1,46 @@
+Name: Inputs
+Id: g=1091017053de55906772fd7321c8f41e
+Type: FolderType
+Children:
+- Name: Eircode
+  Type: InputType1
+  Children:
+  - Name: InputName
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Eircode"
+- Name: Zipcode
+  Type: InputType1
+  Children:
+  - Name: InputName
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Zipcode"
+- Name: Email
+  Type: InputType1
+  Children:
+  - Name: InputName
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Email"
+- Name: Number
+  Type: InputType1
+  Children:
+  - Name: InputName
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Number"
+- Name: Eircode4
+  Type: InputType1
+  Children:
+  - Name: InputName
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Eircode"
+- Name: Eircode5
+  Type: InputType1
+  Children:
+  - Name: InputName
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Eircode"

@@ -200,7 +200,7 @@ this.FeatureBackground();
  testRunner.Then("a barcode for this input is generated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 21
- testRunner.And("the input <\"Input\"> is displayed under the generated barcode", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And(string.Format("the input \"{0}\" is displayed under the generated barcode", input), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -253,12 +253,12 @@ this.BarcodeInputFieldValidationValid("3", "BARCODE", "Regular input", ((string[
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Third Panel")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "4")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:ID", "4")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Input", "qwerty-=[]#;\'./,")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Input", "qwerty-=[]#;\'")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Comment", "Special chars")]
         public void BarcodeInputFieldValidationValid_4()
         {
 #line 17
-this.BarcodeInputFieldValidationValid("4", "qwerty-=[]#;\'./,", "Special chars", ((string[])(null)));
+this.BarcodeInputFieldValidationValid("4", "qwerty-=[]#;\'", "Special chars", ((string[])(null)));
 #line hidden
         }
         

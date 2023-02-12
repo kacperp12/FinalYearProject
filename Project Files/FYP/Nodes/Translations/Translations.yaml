@@ -9,7 +9,7 @@ Children:
   Value: 
    {
     "Type": 12,
-    "Dimensions": [13,2],
+    "Dimensions": [33,2],
     "Body": [
      "","en-US",
      "Acknowledge","Acknowledge",
@@ -23,6 +23,26 @@ Children:
      "Active","Active",
      "Acked","Acked",
      "Confirmed","Confirmed",
-     "Severity","Severity"
+     "Severity","Severity",
+     "Save","Save",
+     "Delete","Delete",
+     "RecipeApply","Recipe applied",
+     "Apply","Apply",
+     "Load","Load",
+     "RecipeDeleted","Recipe deleted",
+     "RecipeLoaded","Recipe loaded",
+     "ChangeUserFormOutputSuccessMessage","Change User successful",
+     "ChangeUserFormOutputErrorMessage","Wrong username or password",
+     "ChangePasswordFormSuccessMessage","Password changed successfully",
+     "ChangePasswordFormWrongOldPasswordMessage","Wrong old password",
+     "ChangePasswordFormPasswordAlreadyUsedMessage","Password already used",
+     "ChangePasswordFormPasswordChangedTooRecentlyMessage","Password changed too recently",
+     "ChangePasswordFormPasswordTooShortMessage","Password too short",
+     "ChangePasswordFormUserNotFoundMessage","User not found",
+     "ChangePasswordFormUnsupportedOperationMessage","Unsupported operation",
+     "ChangePasswordFormPasswordMismatchMessage","Passwords do not match",
+     "Refresh","Refresh",
+     "From","From",
+     "To","To"
     ]
    }

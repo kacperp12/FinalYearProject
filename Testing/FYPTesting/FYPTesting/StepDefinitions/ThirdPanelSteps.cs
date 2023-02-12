@@ -31,18 +31,13 @@ namespace FYPTesting.StepDefinitions
             Button.Click();
         }
 
-        //[Then(@"a barcode for this input is generated")]
-        //public void ThenABarcodeForThisInputIsGenerated()
-        //{
-        //    throw new PendingStepException();
-        //}
-
-        [Then(@"the input <""([^""]*)""> is displayed under the generated barcode")]
+        [Then(@"the input ""([^""]*)"" is displayed under the generated barcode")]
         public void ThenTheInputIsDisplayedUnderTheGeneratedBarcode(string input)
         {
             var LabelSpan = driver.WaitForElementToClickable(By.XPath("(//div[@data-type='rectangle']//div)[3]//span"));
             LabelSpan.Text.Should().Match(input);
         }
+
 
         [Then(@"the input is considered invalid")]
         public void ThenTheInputIsConsideredInvalid()
@@ -51,5 +46,11 @@ namespace FYPTesting.StepDefinitions
             errorSpan.Text.Should().Match("Please check your input! (15 chars max)", "because max input is 15 chars.");
         }
 
+        [Then(@"a barcode for this input is generated")]
+        public void ThenABarcodeForThisInputIsGenerated()
+        {
+            var barcodeImg = driver.WaitForElementToClickable(By.XPath("//div//img"));
+            barcodeImg.Should().NotBeNull();
+        }
     }
 }
