@@ -19,7 +19,7 @@ using FTOptix.EventLogger;
 public class ReusableGraphicsLogic : BaseNetLogic
 {
     [ExportMethod]
-    public void VariableInputValidation(TextBox inputBox) {
+    public void VariableInputValidation() {
 
     }
 
