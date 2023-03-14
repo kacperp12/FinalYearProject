@@ -1,7 +1,7 @@
 Name: Loggers
 Type: FolderType
 Children:
-- Name: DataLogger1
+- Name: DataLogger2
   Type: Datalogger
   Children:
   - Name: SamplingMode
@@ -11,7 +11,7 @@ Children:
   - Name: Store
     Type: NodePointer
     DataType: NodeId
-    Value: {"IdType":2,"Id":"baf1c1cfac05eadfd386b0287232c428","Namespace":16}
+    Value: {"IdType":2,"Id":"5cfe1d9d425e04b5c33ea77f5dee6834","Namespace":16}
     Children:
     - Name: Kind
       Type: PropertyType
@@ -47,10 +47,14 @@ Children:
           Type: BaseVariableType
           DataType: DataBindModeType
           Value: 2
-  - Class: Reference
-    Target: ns=21;i=21
-    Direction: Forward
   - Name: LogLocalTime
     Type: PropertyType
     DataType: Boolean
     Value: true
+  - Name: PollingPeriod
+    Type: PropertyType
+    DataType: Duration
+    Value: "0:00:00:0.1000000"
+  - Class: Reference
+    Target: ns=21;i=21
+    Direction: Forward

@@ -119,9 +119,12 @@ public class VectorGr : BaseNetLogic
 
         edge = "Property2";
 
+        Color color = Color.FromArgb(Int32.Parse(red.Replace("#", ""), System.Globalization.NumberStyles.HexNumber));
+        long value = 3474068210;
+
         foreach(var prop in properties) {
             if(prop.BrowseName.Equals(edge)) {
-                prop.Value = red;
+                prop.Value = value;
             }
         }
 

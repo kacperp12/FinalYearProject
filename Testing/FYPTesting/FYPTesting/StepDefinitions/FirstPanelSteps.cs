@@ -39,6 +39,8 @@ namespace FYPTesting.StepDefinitions
                 "input validation" => 1,
                 "button patterns" => 2,
                 "barcode generator" => 3,
+                "vector graphics" => 4,
+                "reusable graphics" => 5,
                 _ => throw new ArgumentException("No such button name exists!")
             };
 

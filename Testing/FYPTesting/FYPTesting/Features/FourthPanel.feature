@@ -6,7 +6,7 @@
 
 Background:
 	Given the content is refreshed
-	Given the tab "Input Validation" is open
+	Given the tab "Vector Graphics" is open
 
 Scenario Outline: Selecting Object Displays Correctly
 	When I select the "<Shape Name>" shape

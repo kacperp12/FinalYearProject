@@ -796,6 +796,22 @@ Children:
             Type: PropertyType
             DataType: NodeId
             Value: {"Id":71,"Namespace":5}
+      - Name: Panel6
+        Type: NavigationPanelItem
+        Children:
+        - Name: Title
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+        - Name: Panel
+          Type: NodePointer
+          DataType: NodeId
+          Value: {"IdType":2,"Id":"0893a5b68b2556436def15e51d458f3a","Namespace":16}
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: {"Id":71,"Namespace":5}
     - Name: CurrentPanel
       Type: NodePointer
       DataType: NodeId
@@ -810,7 +826,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 550.0
+      Value: 660.0
     - Name: Height
       Type: BaseVariableType
       DataType: Size
@@ -820,7 +836,7 @@ Children:
       Type: BaseVariableType
       DataType: HorizontalAlignment
       ModellingRule: Optional
-      Value: 0
+      Value: 3
     - Name: TabPosition
       Type: BaseVariableType
       DataType: NavigationPanelTabPositionEnum
@@ -830,7 +846,7 @@ Children:
       Type: BaseVariableType
       DataType: VerticalAlignment
       ModellingRule: Optional
-      Value: 0
+      Value: 3
     - Name: TopMargin
       Type: BaseVariableType
       DataType: Size

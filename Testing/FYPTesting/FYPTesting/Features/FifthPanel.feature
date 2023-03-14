@@ -68,3 +68,9 @@ Scenario Outline: Input Validation for Selection of Input Types (Invalid Entries
 	| 15 | Number     | letters                       | Letters not allowed                                  |
 	| 16 | Number     | 111                           | Input too short                                      |
 	| 17 | Number     | 111111111111111               | Input too long                                       |
+
+Scenario: Incorrect Input Displays Error Message
+	When I select "Eircode" from the selection of input types
+	* I input "test" into the textbox
+	Then an error message is displayed
+	* the submit button is disabled
