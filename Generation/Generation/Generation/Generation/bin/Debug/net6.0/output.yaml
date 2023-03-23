@@ -1,0 +1,3 @@
+// MyTemplate.stg
+
+MyObjectData(yaml) ::= "$raw(yaml)$"

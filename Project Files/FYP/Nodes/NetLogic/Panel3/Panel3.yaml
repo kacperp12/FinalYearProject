@@ -1,8 +1,8 @@
 Name: Panel3
 Type: FolderType
 Children:
-- Name: BarcodeGen
-  Id: g=00e12b727844ca716c455e088be20509
+- Name: BarcodeGenLogic
+  Id: g=7e9c53256ea027ebcd1c218b376df465
   Type: NetLogic
   Children:
   - Class: Method
@@ -24,4 +24,4 @@ Children:
       ReferenceType: HasProperty
       ValueRank: OneDimension
       ArrayDimensions: [0]
-      Value: [{"TypeId":{"Id":296},"Body":{"Name":"TextboxId","DataType":{"Id":17},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"Label2Id","DataType":{"Id":17},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"SubmitButtonId","DataType":{"Id":17},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+      Value: [{"TypeId":{"Id":296},"Body":{"Name":"TextboxId","DataType":{"Id":17},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"Label2Id","DataType":{"Id":17},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]

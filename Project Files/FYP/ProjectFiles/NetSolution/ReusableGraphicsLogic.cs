@@ -86,52 +86,21 @@ public class ReusableGraphicsLogic : BaseNetLogic
         }
         else
         {
-            // Enable the textbox and submit button
+            // Enable the textbox and
             textbox.Enabled = true;
 
             // Check if the selected item has changed
             bool isItemSelected = listbox.UISelectedValue != null;
             if (isItemSelected && !isSelected)
             {
-                // A new item has been selected, enable the submit button
                 isSelected = true;
             }
             else if (!isItemSelected && isSelected)
             {
-                // The selected item has been deselected, disable the submit button
                 isSelected = false;
             }
         }
     }
-
-    // [ExportMethod]
-    // public void EnableUserInput(NodeId inputBox, NodeId listBox) {
-    //     TextBox textbox = InformationModel.Get<TextBox>(inputBox);
-    //     ListBox listbox = InformationModel.Get<ListBox>(listBox);
-
-    //     var test = listbox.UISelectedValue.ToString;
-    //     Console.WriteLine(test);
-
-    //     if(listbox.UISelectedItem == null) {
-    //         textbox.Enabled = true;
-    //     } 
-    //     else {
-    //         textbox.Text = "";
-    //         textbox.Enabled = false;
-    //         textbox.BorderColor = new Color(255, 0, 255, 0);
-    //     }
-
-    //     // if(!isSelected) {
-    //     //     textbox.Enabled = true;
-    //     //     isSelected = true;
-    //     // }
-    //     // else {
-    //     //     textbox.Text = "";
-    //     //     textbox.Enabled = false;
-    //     //     textbox.BorderColor = new Color(255, 0, 255, 0);
-    //     //     isSelected = false;
-    //     // }
-    // }
 
     [ExportMethod]
     public void ResetUserInput(NodeId inputBox)
@@ -148,5 +117,5 @@ public class ReusableGraphicsLogic : BaseNetLogic
 
         if ((ErrorLabel != null) && (ErrorLabel.IsValid))
             ErrorLabel.Text = "";
-    }
+    }   
 }
