@@ -923,7 +923,7 @@ Children:
       - Name: Model
         Type: NodePointer
         DataType: NodeId
-        Value: {"IdType":2,"Id":"5cfe1d9d425e04b5c33ea77f5dee6834","Namespace":16}
+        Value: {"IdType":2,"Id":"9ed69902ebec6376beb6b04186720236","Namespace":16}
         Children:
         - Name: ItemKind
           Type: PropertyType
@@ -936,7 +936,7 @@ Children:
       - Name: Query
         Type: BaseDataVariableType
         DataType: String
-        Value: "SELECT * FROM \"DataLogger2\" ORDER BY \"Timestamp\" DESC"
+        Value: "SELECT * FROM \"DataLogger3\" ORDER BY Timestamp DESC"
       - Name: Columns
         Type: BaseObjectType
         Children:

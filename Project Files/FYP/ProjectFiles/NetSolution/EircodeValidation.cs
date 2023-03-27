@@ -22,46 +22,76 @@ using FTOptix.Datalogger;
 using FTOptix.EventLogger;
 #endregion
 
+// This class provides a method for validating Eircode inputs and submitting them.
 public sealed class EircodeValidation : BaseNetLogic
 {
-    Label ErrorLabel;
-    TextBox Textbox;
-    Button SubmitButton;
+    // This is the regular expression pattern used to validate Eircode inputs.
+    private const string RegexPattern = @"^[ACDEFHKNPRTVWXY]{1}[0-9]{1}[0-9W]{1}[\ ]{1}[0-9ACDEFHKNPRTVWXY]{4}";
 
+    // These are the UI elements used in the Eircode validation process.
+    private Label ErrorLabel;
+    private TextBox Textbox;
+    private Button SubmitButton;
+
+    // This method is used to dynamically validate Eircode inputs.
     [ExportMethod]
     public void DynamicEircodeInputValidation(NodeId TextboxNodeId, NodeId ErrorLabelNodeId, NodeId SubmitButtonNodeId)
     {
-        string regexPattern = @"^[ACDEFHKNPRTVWXY]{1}[0-9]{1}[0-9W]{1}[\ ]{1}[0-9ACDEFHKNPRTVWXY]{4}";
+        // Get the UI elements.
         ErrorLabel = InformationModel.Get<Label>(ErrorLabelNodeId);
         Textbox = InformationModel.Get<TextBox>(TextboxNodeId); 
         SubmitButton = InformationModel.Get<Button>(SubmitButtonNodeId);
 
-        if(!Regex.Match(Textbox.Text, regexPattern).Success || Textbox.Text.Length != 8) {
+        // Validate the Eircode input.
+        ValidateEircode();
+    }
+
+    // This method is used to submit a valid Eircode input.
+    [ExportMethod]
+    public void SubmitEircode(NodeId SubmittedLabelNodeId)
+    {
+        // Get the submitted label from the InformationModel.
+        Label SubmittedLabel = InformationModel.Get<Label>(SubmittedLabelNodeId);
+
+        // Set the opacity of the submitted label to 100% and fade it out over 2 seconds.
+        SubmittedLabel.Opacity = 100;
+        FadeOutLabel(SubmittedLabel, 2);
+    }
+
+    // This method is used to validate the Eircode input.
+    private void ValidateEircode()
+    {
+        // If the Eircode input is not valid, display an error message and disable the submit button.
+        if (!IsValidEircode(Textbox.Text))
+        {
             Textbox.BorderColor = new Color(255, 255, 0, 0);
             ErrorLabel.TextColor = new Color(255, 255, 0, 0);
             ErrorLabel.Text = "Please check your input!";
             SubmitButton.Enabled = false;
         }
-        else {
+        // If the Eircode input is valid, clear the error message and enable the submit button.
+        else
+        {
             Textbox.BorderColor = new Color(255, 0, 255, 0);
             ErrorLabel.Text = "";
             SubmitButton.Enabled = true;
         }
     }
 
-    [ExportMethod]
-    public void SubmitEircode(NodeId SubmittedLabelNodeId)
+    // This method is used to check if an Eircode input is valid.
+    private static bool IsValidEircode(string eircode)
     {
-        Label SubmittedLabel = InformationModel.Get<Label>(SubmittedLabelNodeId);
-        SubmittedLabel.Opacity = 100;
-        FadeOutLabel(SubmittedLabel, 2);
+        return Regex.IsMatch(eircode, RegexPattern) && eircode.Length == 8;
     }
 
+    // This method is used to fade out a label over a specified interval.
     private async void FadeOutLabel(Label LabelToBeFaded, int interval)
     {
+        // Set an initial delay before fading out the label.
         int initialFadeDelay = 1000;
         await Task.Delay(initialFadeDelay);
 
+        // Fade out the label over the specified interval.
         while(LabelToBeFaded.Opacity > 0.0) 
         {
             await Task.Delay(interval);

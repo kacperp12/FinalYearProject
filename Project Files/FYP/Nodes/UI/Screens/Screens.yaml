@@ -887,7 +887,7 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 42.0
+          Value: 40.0
         - Name: HorizontalAlignment
           Type: BaseVariableType
           DataType: HorizontalAlignment
@@ -920,7 +920,7 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 42.0
+          Value: 40.0
         - Name: FontSize
           Type: BaseDataVariableType
           DataType: Size
@@ -1075,7 +1075,7 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 38.0
+          Value: 28.0
       - Name: DangerMaxValue
         Type: TextBox
         Children:
@@ -1215,7 +1215,7 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 38.0
+          Value: 28.0
       - Name: DangerUpdateButton
         Type: Button
         Children:
@@ -1228,7 +1228,7 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 189.0
+          Value: 187.0
         - Name: TopMargin
           Type: BaseVariableType
           DataType: Size
@@ -1264,40 +1264,6 @@ Children:
           - Name: MethodsToCall
             Type: BaseObjectType
             Children:
-            - Name: MethodContainer1
-              Type: BaseObjectType
-              Children:
-              - Name: ns=3;ObjectPointer
-                Type: NodePointer
-                DataType: NodeId
-                Value: {"IdType":2,"Id":"522bb4bee7c430020b7119cdec17b6c7","Namespace":16}
-                Children:
-                - Name: Kind
-                  Type: PropertyType
-                  DataType: NodeId
-                  Value: {"Id":58}
-              - Name: ns=3;Method
-                Type: BaseDataVariableType
-                DataType: String
-                Value: "UpdateGaugeValues"
-              - Name: InputArguments
-                Type: BaseObjectType
-                Children:
-                - Name: GaugeNodeId
-                  Type: BaseDataVariableType
-                  DataType: NodeId
-                  Value: {"IdType":0,"Id":0,"Namespace":-1}
-                  Children:
-                  - Name: DynamicLink
-                    Type: DataBind
-                    DataType: NodePath
-                    Value: "../../../../../../../../SliderPanel/Rectangle2/CircularGauge1@NodeId"
-                    Children:
-                    - Name: Mode
-                      Type: BaseVariableType
-                      DataType: DataBindModeType
-                      ModellingRule: Optional
-                      Value: 2
             - Name: MethodContainer2
               Type: BaseObjectType
               Children:
@@ -1371,6 +1337,85 @@ Children:
                     Type: DataBind
                     DataType: NodePath
                     Value: "../../../../../../../../SliderPanel/Rectangle2/CircularGauge1@NodeId"
+                    Children:
+                    - Name: Mode
+                      Type: BaseVariableType
+                      DataType: DataBindModeType
+                      ModellingRule: Optional
+                      Value: 2
+            - Name: MethodContainer1
+              Type: BaseObjectType
+              Children:
+              - Name: ns=3;ObjectPointer
+                Type: NodePointer
+                DataType: NodeId
+                Value: {"IdType":2,"Id":"522bb4bee7c430020b7119cdec17b6c7","Namespace":16}
+                Children:
+                - Name: Kind
+                  Type: PropertyType
+                  DataType: NodeId
+                  Value: {"Id":58}
+              - Name: ns=3;Method
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "UpdateGaugeValues"
+              - Name: InputArguments
+                Type: BaseObjectType
+                Children:
+                - Name: GaugeNodeId
+                  Type: BaseDataVariableType
+                  DataType: NodeId
+                  Value: {"IdType":0,"Id":0,"Namespace":-1}
+                  Children:
+                  - Name: DynamicLink
+                    Type: DataBind
+                    DataType: NodePath
+                    Value: "../../../../../../../../SliderPanel/Rectangle2/CircularGauge1@NodeId"
+                    Children:
+                    - Name: Mode
+                      Type: BaseVariableType
+                      DataType: DataBindModeType
+                      ModellingRule: Optional
+                      Value: 2
+                - Name: UpdateButtonNodeId
+                  Type: BaseDataVariableType
+                  DataType: NodeId
+                  Value: {"IdType":0,"Id":0,"Namespace":-1}
+                  Children:
+                  - Name: DynamicLink
+                    Type: DataBind
+                    DataType: NodePath
+                    Value: "../../../../..@NodeId"
+                    Children:
+                    - Name: Mode
+                      Type: BaseVariableType
+                      DataType: DataBindModeType
+                      ModellingRule: Optional
+                      Value: 2
+                - Name: MinValueNodeId
+                  Type: BaseDataVariableType
+                  DataType: NodeId
+                  Value: {"IdType":0,"Id":0,"Namespace":-1}
+                  Children:
+                  - Name: DynamicLink
+                    Type: DataBind
+                    DataType: NodePath
+                    Value: "../../../../../../DangerMinValue@NodeId"
+                    Children:
+                    - Name: Mode
+                      Type: BaseVariableType
+                      DataType: DataBindModeType
+                      ModellingRule: Optional
+                      Value: 2
+                - Name: MaxValueNodeId
+                  Type: BaseDataVariableType
+                  DataType: NodeId
+                  Value: {"IdType":0,"Id":0,"Namespace":-1}
+                  Children:
+                  - Name: DynamicLink
+                    Type: DataBind
+                    DataType: NodePath
+                    Value: "../../../../../../DangerMaxValue@NodeId"
                     Children:
                     - Name: Mode
                       Type: BaseVariableType
@@ -1509,7 +1554,7 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 59.0
+          Value: 60.0
         - Name: ModifiedTextHandler1
           Type: EventHandler
           Children:
@@ -1632,7 +1677,7 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 38.0
+          Value: 29.0
       - Name: WarningMaxValue
         Type: TextBox
         Children:
@@ -1654,7 +1699,7 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 59.0
+          Value: 60.0
         - Name: ModifiedTextHandler1
           Type: EventHandler
           Children:
@@ -1772,7 +1817,7 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 38.0
+          Value: 29.0
       - Name: AdjustWarningLabel
         Type: Label
         Children:
@@ -1790,7 +1835,7 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 9.0
+          Value: 13.0
         - Name: TextColor
           Type: BaseDataVariableType
           DataType: Color
@@ -1895,40 +1940,6 @@ Children:
           - Name: MethodsToCall
             Type: BaseObjectType
             Children:
-            - Name: MethodContainer1
-              Type: BaseObjectType
-              Children:
-              - Name: ns=3;ObjectPointer
-                Type: NodePointer
-                DataType: NodeId
-                Value: {"IdType":2,"Id":"522bb4bee7c430020b7119cdec17b6c7","Namespace":16}
-                Children:
-                - Name: Kind
-                  Type: PropertyType
-                  DataType: NodeId
-                  Value: {"Id":58}
-              - Name: ns=3;Method
-                Type: BaseDataVariableType
-                DataType: String
-                Value: "UpdateGaugeValues"
-              - Name: InputArguments
-                Type: BaseObjectType
-                Children:
-                - Name: GaugeNodeId
-                  Type: BaseDataVariableType
-                  DataType: NodeId
-                  Value: {"IdType":0,"Id":0,"Namespace":-1}
-                  Children:
-                  - Name: DynamicLink
-                    Type: DataBind
-                    DataType: NodePath
-                    Value: "../../../../../../../../SliderPanel/Rectangle2/CircularGauge1@NodeId"
-                    Children:
-                    - Name: Mode
-                      Type: BaseVariableType
-                      DataType: DataBindModeType
-                      ModellingRule: Optional
-                      Value: 2
             - Name: MethodContainer2
               Type: BaseObjectType
               Children:
@@ -2008,6 +2019,85 @@ Children:
                       DataType: DataBindModeType
                       ModellingRule: Optional
                       Value: 2
+            - Name: MethodContainer1
+              Type: BaseObjectType
+              Children:
+              - Name: ns=3;ObjectPointer
+                Type: NodePointer
+                DataType: NodeId
+                Value: {"IdType":2,"Id":"522bb4bee7c430020b7119cdec17b6c7","Namespace":16}
+                Children:
+                - Name: Kind
+                  Type: PropertyType
+                  DataType: NodeId
+                  Value: {"Id":58}
+              - Name: ns=3;Method
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "UpdateGaugeValues"
+              - Name: InputArguments
+                Type: BaseObjectType
+                Children:
+                - Name: GaugeNodeId
+                  Type: BaseDataVariableType
+                  DataType: NodeId
+                  Value: {"IdType":0,"Id":0,"Namespace":-1}
+                  Children:
+                  - Name: DynamicLink
+                    Type: DataBind
+                    DataType: NodePath
+                    Value: "../../../../../../../../SliderPanel/Rectangle2/CircularGauge1@NodeId"
+                    Children:
+                    - Name: Mode
+                      Type: BaseVariableType
+                      DataType: DataBindModeType
+                      ModellingRule: Optional
+                      Value: 2
+                - Name: UpdateButtonNodeId
+                  Type: BaseDataVariableType
+                  DataType: NodeId
+                  Value: {"IdType":0,"Id":0,"Namespace":-1}
+                  Children:
+                  - Name: DynamicLink
+                    Type: DataBind
+                    DataType: NodePath
+                    Value: "../../../../..@NodeId"
+                    Children:
+                    - Name: Mode
+                      Type: BaseVariableType
+                      DataType: DataBindModeType
+                      ModellingRule: Optional
+                      Value: 2
+                - Name: MinValueNodeId
+                  Type: BaseDataVariableType
+                  DataType: NodeId
+                  Value: {"IdType":0,"Id":0,"Namespace":-1}
+                  Children:
+                  - Name: DynamicLink
+                    Type: DataBind
+                    DataType: NodePath
+                    Value: "../../../../../../WarningMinValue@NodeId"
+                    Children:
+                    - Name: Mode
+                      Type: BaseVariableType
+                      DataType: DataBindModeType
+                      ModellingRule: Optional
+                      Value: 2
+                - Name: MaxValueNodeId
+                  Type: BaseDataVariableType
+                  DataType: NodeId
+                  Value: {"IdType":0,"Id":0,"Namespace":-1}
+                  Children:
+                  - Name: DynamicLink
+                    Type: DataBind
+                    DataType: NodePath
+                    Value: "../../../../../../WarningMaxValue@NodeId"
+                    Children:
+                    - Name: Mode
+                      Type: BaseVariableType
+                      DataType: DataBindModeType
+                      ModellingRule: Optional
+                      Value: 2
           - Name: EventArguments
             Type: MouseClickEvent
             Children:
@@ -2058,142 +2148,6 @@ Children:
         DataType: VerticalAlignment
         ModellingRule: Optional
         Value: 2
-- Name: Panel1
-  Id: g=0893a5b68b2556436def15e51d458f3a
-  Supertype: Panel
-  ReferenceType: HasComponent
-  Children:
-  - Name: Width
-    Type: BaseVariableType
-    DataType: Size
-    ModellingRule: Optional
-    Value: 550.0
-  - Name: Height
-    Type: BaseVariableType
-    DataType: Size
-    ModellingRule: Optional
-    Value: 550.0
-  - Name: HorizontalAlignment
-    Type: BaseVariableType
-    DataType: HorizontalAlignment
-    ModellingRule: Optional
-    Value: 3
-  - Name: VerticalAlignment
-    Type: BaseVariableType
-    DataType: VerticalAlignment
-    ModellingRule: Optional
-    Value: 3
-  - Name: LED1
-    Type: Led
-    Children:
-    - Name: Active
-      Type: BaseDataVariableType
-      DataType: Boolean
-      Value: false
-    - Name: Width
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 50.0
-    - Name: Height
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 50.0
-    - Name: LeftMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 0.0
-    - Name: TopMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 100.0
-    - Name: HorizontalAlignment
-      Type: BaseVariableType
-      DataType: HorizontalAlignment
-      ModellingRule: Optional
-      Value: 0
-    - Name: VerticalAlignment
-      Type: BaseVariableType
-      DataType: VerticalAlignment
-      ModellingRule: Optional
-      Value: 0
-  - Name: LED2
-    Type: Led
-    Children:
-    - Name: Active
-      Type: BaseDataVariableType
-      DataType: Boolean
-      Value: false
-    - Name: Width
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 50.0
-    - Name: Height
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 50.0
-    - Name: LeftMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 0.0
-    - Name: TopMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 100.0
-    - Name: HorizontalAlignment
-      Type: BaseVariableType
-      DataType: HorizontalAlignment
-      ModellingRule: Optional
-      Value: 2
-    - Name: VerticalAlignment
-      Type: BaseVariableType
-      DataType: VerticalAlignment
-      ModellingRule: Optional
-      Value: 0
-  - Name: LED3
-    Type: Led
-    Children:
-    - Name: Active
-      Type: BaseDataVariableType
-      DataType: Boolean
-      Value: false
-    - Name: Width
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 50.0
-    - Name: Height
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 50.0
-    - Name: LeftMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 0.0
-    - Name: TopMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 100.0
-    - Name: HorizontalAlignment
-      Type: BaseVariableType
-      DataType: HorizontalAlignment
-      ModellingRule: Optional
-      Value: 1
-    - Name: VerticalAlignment
-      Type: BaseVariableType
-      DataType: VerticalAlignment
-      ModellingRule: Optional
-      Value: 0
 - Name: InputValidation
   Id: g=a69dd0123274f6f1d92935411c418fb3
   Supertype: Panel
@@ -3165,6 +3119,55 @@ Children:
         - Name: MethodsToCall
           Type: BaseObjectType
           Children:
+          - Name: MethodContainer2
+            Type: BaseObjectType
+            Children:
+            - Name: ns=3;ObjectPointer
+              Type: NodePointer
+              DataType: NodeId
+              Value: {"IdType":2,"Id":"7e9c53256ea027ebcd1c218b376df465","Namespace":16}
+              Children:
+              - Name: Kind
+                Type: PropertyType
+                DataType: NodeId
+                Value: {"Id":58}
+            - Name: ns=3;Method
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "InputChecker"
+            - Name: InputArguments
+              Type: BaseObjectType
+              Children:
+              - Name: TextboxId
+                Type: BaseDataVariableType
+                DataType: NodeId
+                Value: {"IdType":0,"Id":0,"Namespace":-1}
+                Children:
+                - Name: DynamicLink
+                  Type: DataBind
+                  DataType: NodePath
+                  Value: "../../../../..@NodeId"
+                  Children:
+                  - Name: Mode
+                    Type: BaseVariableType
+                    DataType: DataBindModeType
+                    ModellingRule: Optional
+                    Value: 2
+              - Name: Label2Id
+                Type: BaseDataVariableType
+                DataType: NodeId
+                Value: {"IdType":0,"Id":0,"Namespace":-1}
+                Children:
+                - Name: DynamicLink
+                  Type: DataBind
+                  DataType: NodePath
+                  Value: "../../../../../../Label2@NodeId"
+                  Children:
+                  - Name: Mode
+                    Type: BaseVariableType
+                    DataType: DataBindModeType
+                    ModellingRule: Optional
+                    Value: 2
           - Name: MethodContainer1
             Type: BaseObjectType
             Children:
@@ -3244,55 +3247,6 @@ Children:
                     DataType: DataBindModeType
                     ModellingRule: Optional
                     Value: 2
-          - Name: MethodContainer2
-            Type: BaseObjectType
-            Children:
-            - Name: ns=3;ObjectPointer
-              Type: NodePointer
-              DataType: NodeId
-              Value: {"IdType":2,"Id":"7e9c53256ea027ebcd1c218b376df465","Namespace":16}
-              Children:
-              - Name: Kind
-                Type: PropertyType
-                DataType: NodeId
-                Value: {"Id":58}
-            - Name: ns=3;Method
-              Type: BaseDataVariableType
-              DataType: String
-              Value: "InputChecker"
-            - Name: InputArguments
-              Type: BaseObjectType
-              Children:
-              - Name: TextboxId
-                Type: BaseDataVariableType
-                DataType: NodeId
-                Value: {"IdType":0,"Id":0,"Namespace":-1}
-                Children:
-                - Name: DynamicLink
-                  Type: DataBind
-                  DataType: NodePath
-                  Value: "../../../../..@NodeId"
-                  Children:
-                  - Name: Mode
-                    Type: BaseVariableType
-                    DataType: DataBindModeType
-                    ModellingRule: Optional
-                    Value: 2
-              - Name: Label2Id
-                Type: BaseDataVariableType
-                DataType: NodeId
-                Value: {"IdType":0,"Id":0,"Namespace":-1}
-                Children:
-                - Name: DynamicLink
-                  Type: DataBind
-                  DataType: NodePath
-                  Value: "../../../../../../Label2@NodeId"
-                  Children:
-                  - Name: Mode
-                    Type: BaseVariableType
-                    DataType: DataBindModeType
-                    ModellingRule: Optional
-                    Value: 2
         - Name: EventArguments
           Type: UserTextChanged
           Children:
@@ -3339,7 +3293,7 @@ Children:
         Type: BaseDataVariableType
         DataType: LocalizedText
         ModellingRule: Optional
-        Value: {"LocaleId":"en-US","Text":"aaa"}
+        Value: {"LocaleId":"en-US","Text":""}
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size

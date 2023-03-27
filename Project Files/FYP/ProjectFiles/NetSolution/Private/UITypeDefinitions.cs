@@ -30,11 +30,6 @@ public class BarcodeGenerator : FTOptix.UI.Panel
 {
 }
 
-[MapType(NamespaceUri = "FYP", Guid = "0893a5b68b2556436def15e51d458f3a")]
-public class Panel1 : FTOptix.UI.Panel
-{
-}
-
 [MapType(NamespaceUri = "FYP", Guid = "f2c510b95e8f950baa02347c041aca4a")]
 public class VectorGraphics : FTOptix.UI.Panel
 {

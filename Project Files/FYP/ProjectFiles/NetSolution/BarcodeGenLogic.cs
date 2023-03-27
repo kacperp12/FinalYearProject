@@ -22,58 +22,57 @@ using FTOptix.Recipe;
 using FTOptix.Datalogger;
 using FTOptix.EventLogger;
 using System.Threading;
+using ZXing.Rendering;
+using System.Text.RegularExpressions;
 #endregion
 
 public class BarcodeGenLogic : BaseNetLogic
 {
-    TextBox Textbox;
-    Image BarcodeImg;
-    Label BarcodeText, ErrorLabelText;
-    static string filePath = "";
+    private TextBox Textbox;
+
+    private Image BarcodeImg;
+
+    private Label BarcodeText, ErrorLabelText;
+
+
+    // A timer for debouncing text input
     private Timer debounceTimer;
+
+    // A lock object for thread safety
     private object debounceLock = new object();
 
     [ExportMethod]
-    public void GenerateBarcode(NodeId TextboxId, NodeId ImageId, NodeId LabelId, NodeId Label2Id) {
+    public void GenerateBarcode(NodeId TextboxId, NodeId ImageId, NodeId LabelId, NodeId Label2Id)
+    {
+        // Get the relevant UI controls
         Textbox = InformationModel.Get<TextBox>(TextboxId);
         BarcodeImg = InformationModel.Get<Image>(ImageId);
         BarcodeText = InformationModel.Get<Label>(LabelId);
         ErrorLabelText = InformationModel.Get<Label>(Label2Id);
 
-        ErrorLabelText.Text = "";
-
-        //Ensures each svg file is deleted once it is redundant
-        //Prevents a build up of svg files
-        if(!filePath.Equals(""))
-            if(File.Exists(filePath))
-                File.Delete(filePath);
-
-        //CREATE ERROR TO BE DISPLAYED HERE AT SOME POINT!!!
-        if(Textbox.Text.Equals(""))
-            return;
-
-        // Cancel previous debounce timer
+        // Cancel previous debounce timer and start new one
         lock (debounceLock)
         {
             debounceTimer?.Dispose();
             debounceTimer = null;
         }
-
-        // Start new debounce timer
         debounceTimer = new Timer(state =>
         {
             // Call GenerateBarcodeInternal with textbox text as argument
-            GenerateBarcodeInternal(Textbox.Text, Label2Id);
+            GenerateBarcodeInternal(Textbox.Text);
         }, null, 750, Timeout.Infinite);
 
+        // Update the label control with the text from the textbox control
         BarcodeText.Text = Textbox.Text;
     }
 
-    private void GenerateBarcodeInternal(string text, NodeId barcodeText)
+    private void GenerateBarcodeInternal(string text)
     {
-        if (string.IsNullOrEmpty(text) || text.Length > 15)
+        // Check if the text input is valid
+        if (string.IsNullOrEmpty(text) || text.Length > 15 || !Regex.IsMatch(text, "^[ -~]*$"))
             return;
 
+        // Generate a random string of characters
         var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
         var random = new Random();
         var result = new string(
@@ -81,13 +80,10 @@ public class BarcodeGenLogic : BaseNetLogic
                       .Select(s => s[random.Next(s.Length)])
                       .ToArray());
 
+        // Create a project-relative resource URI for the SVG file
         var projectRelativeResourceUri = ResourceUri.FromProjectRelativePath($"{result}.svg");
 
-        string Data = text;
-
-        if (File.Exists(filePath))
-            File.Delete(filePath);
-
+        // Generate a barcode image in SVG format using the text input
         var barcodeWriter = new BarcodeWriterSvg
         {
             Format = BarcodeFormat.CODE_128,
@@ -98,43 +94,75 @@ public class BarcodeGenLogic : BaseNetLogic
                 PureBarcode = true
             }
         };
+        var bt = barcodeWriter.Write(text);
 
-        var bt = barcodeWriter.Write(Data);
+        // Write the SVG image to a file
         File.WriteAllText(projectRelativeResourceUri.Uri, bt.ToString());
 
-        // Move to separate function
-        XmlDocument svgDoc = new XmlDocument();
-        svgDoc.Load(projectRelativeResourceUri.Uri);
+        // Modify the SVG image
+        modifySVG(projectRelativeResourceUri);
 
-        foreach (XmlNode childNode in svgDoc.ChildNodes)
+        // Update the image control with the new SVG file path
+        BarcodeImg.Path = projectRelativeResourceUri;
+    }
+
+    /*
+    This method modifies the SVG file. The generated barcode has a white background with no option to modify this 
+    within the ZXing library. This method converts the white background into the same background colour as my application.
+    */
+    private void modifySVG(ResourceUri projectRel)
+    {
+        // Load the SVG file into an XML document
+        XmlDocument svgDoc = new XmlDocument();
+        svgDoc.Load(projectRel.Uri);
+
+        // Modify the style attribute of the SVG node to add the correct background colour
+        foreach (XmlNode childNode in svgDoc.SelectNodes("//svg"))
         {
-            if (childNode.Name == "svg")
+            if (childNode.Attributes != null)
             {
-                if(childNode.Attributes != null) {
-                    XmlAttribute fillAttribute = childNode.Attributes["style"];
-                    fillAttribute.Value = "background-color:rgb(192,232,251);background-color:rgba(192, 232, 251, 1)";
-                    svgDoc.Save(projectRelativeResourceUri.Uri);
-                    break;
-                }
+                XmlAttribute fillAttribute = childNode.Attributes["style"];
+                fillAttribute.Value = "background-color:rgb(192,232,251);background-color:rgba(192, 232, 251, 1)";
+                break;
             }
         }
 
-        svgDoc.Save(projectRelativeResourceUri.Uri);
-        
-        BarcodeImg.Path = projectRelativeResourceUri;
-        }
+        // Save the modified SVG document to the file
+        svgDoc.Save(projectRel.Uri);
+    }
 
     [ExportMethod]
-    public void InputChecker(NodeId TextboxId, NodeId Label2Id) {
+    public void InputChecker(NodeId TextboxId, NodeId Label2Id)
+    {
+        // Get the relevant UI controls
         Textbox = InformationModel.Get<TextBox>(TextboxId);
         ErrorLabelText = InformationModel.Get<Label>(Label2Id);
 
-        if(Textbox.Text.Length > 15) {
+        // Check the length of the text input
+        if (Textbox.Text.Length > 15)
+        {
+            // If the text input is too long, set the text box border color and error label text color to red and display an error message
             Textbox.BorderColor = new Color(255, 255, 0, 0);
             ErrorLabelText.TextColor = new Color(255, 255, 0, 0);
             ErrorLabelText.Text = "Please check your input! (15 chars max)";
         }
-        else {
+        else if (Textbox.Text.Length == 0)
+        {
+            // If the text input is empty, set the text box border color and error label text color to red and display an error message
+            Textbox.BorderColor = new Color(255, 255, 0, 0);
+            ErrorLabelText.TextColor = new Color(255, 255, 0, 0);
+            ErrorLabelText.Text = "Input needs to be greater than 0!";
+        }
+        else if (!Regex.IsMatch(Textbox.Text, "^[ -~]*$"))
+        {
+            // If the text input contains non-ASCII characters, set the text box border color and error label text color to red and display an error message
+            Textbox.BorderColor = new Color(255, 255, 0, 0);
+            ErrorLabelText.TextColor = new Color(255, 255, 0, 0);
+            ErrorLabelText.Text = "Input contains invalid characters!";
+        }
+        else
+        {
+            // If the text input is valid, set the text box border color to green and clear the error message
             Textbox.BorderColor = new Color(255, 0, 255, 0);
             ErrorLabelText.Text = "";
         }
