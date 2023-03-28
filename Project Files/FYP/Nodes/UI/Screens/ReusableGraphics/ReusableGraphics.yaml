@@ -1,4 +1,4 @@
-Name: last panel
+Name: ReusableGraphics
 Type: FolderType
 Children:
 - Name: ReusablePanel
@@ -426,6 +426,22 @@ Children:
                 Type: BaseDataVariableType
                 DataType: NodeId
                 Value: {"IdType":2,"Id":"72dca9e6935388952e4f5727ef60c584","Namespace":16}
+          - Name: MethodContainer3
+            Type: BaseObjectType
+            Children:
+            - Name: ns=3;ObjectPointer
+              Type: NodePointer
+              DataType: NodeId
+              Value: {"IdType":2,"Id":"e84b29a6b74388151f8568274de0cf7c","Namespace":16}
+              Children:
+              - Name: Kind
+                Type: PropertyType
+                DataType: NodeId
+                Value: {"Id":58}
+            - Name: ns=3;Method
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "Log"
         - Name: EventArguments
           Type: MouseClickEvent
           Children:
@@ -1279,6 +1295,22 @@ Children:
                   Type: BaseDataVariableType
                   DataType: String
                   Value: "Refresh"
+              - Name: MethodContainer3
+                Type: BaseObjectType
+                Children:
+                - Name: ObjectPointer
+                  Type: NodePointer
+                  DataType: NodeId
+                  Value: {"IdType":2,"Id":"e84b29a6b74388151f8568274de0cf7c","Namespace":16}
+                  Children:
+                  - Name: Kind
+                    Type: PropertyType
+                    DataType: NodeId
+                    Value: {"Id":58}
+                - Name: Method
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Value: "Log"
             - Name: EventArguments
               Type: MouseClickEvent
               Children:

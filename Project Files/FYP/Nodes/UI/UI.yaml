@@ -145,7 +145,7 @@ Children:
       Value: {"Id":14,"Namespace":1}
   - Name: Sessions
     Type: BaseObjectType
-- Name: WebPresentationEngine1
+- Name: WebPresentationEngine
   Type: ns=14;PresentationEngine
   Children:
   - Name: Protocol
@@ -863,4 +863,3 @@ Children:
       ModellingRule: Optional
       Value: 0.0
 - File: Screens/Screens.yaml
-- File: To be Deleted/To be Deleted.yaml

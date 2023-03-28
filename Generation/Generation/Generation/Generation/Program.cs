@@ -72,6 +72,7 @@ class Program
     static void Main(string[] args)
     {
         List<object> objects = new List<object>();
+
         bool finish = false;
         Dictionary<int, string> controlTypes = new Dictionary<int, string>
             {
@@ -107,8 +108,7 @@ class Program
             if (possibleObjects.TryGetValue(choice, out Func<object> creator))
             {
                 objects.Add(creator());
-                
-                objects.Add(new Label($"Object {numObjects + 1}", 50, controlTop));
+                objects.Add(new Label($"Object {numObjects + 1}", 100, controlTop));
                 numObjects++;
             }
             else if (choice == 5)
@@ -150,19 +150,18 @@ class Program
     {
         Console.WriteLine($"Please enter a name for the {controlType}:");
         string controlName = Console.ReadLine();
-        int controlLeft = GetIntInput("Please enter the left margin:", 400);
         controlTop = GetIntInput("Please enter the top margin:", 400);
 
         switch (controlType)
         {
             case "button":
-                return new Button(controlName, controlLeft, controlTop);
+                return new Button(controlName, 200, controlTop);
             case "led":
-                return new LED(controlName, controlLeft, controlTop);
+                return new LED(controlName, 200, controlTop);
             case "textbox":
-                return new Textbox(controlName, controlLeft, controlTop);
+                return new Textbox(controlName, 200, controlTop);
             case "label":
-                return new Label(controlName, controlLeft, controlTop);
+                return new Label(controlName, 200, controlTop);
             default:
                 throw new ArgumentException($"Invalid control type: {controlType}");
         }

@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using BoDi;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
@@ -17,15 +18,6 @@ namespace FYPTesting
         private static WebDriverWait wait;
         private static volatile DriverHierarchy instance = null;
 
-        //private DriverHierarchy()
-        //{
-        //    var chromeOptions = new ChromeOptions();
-        //    driver = new ChromeDriver(chromeOptions);
-        //    wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-        //    driver.Navigate().GoToUrl("http://127.0.0.2:8081");
-        //    driver.Manage().Window.Maximize();
-        //}
-
         static DriverHierarchy()
         {
             var chromeOptions = new ChromeOptions();
@@ -33,6 +25,7 @@ namespace FYPTesting
             wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
             driver.Navigate().GoToUrl("http://127.0.0.2:8081");
             driver.Manage().Window.Maximize();
+            ClearScreenshots();
         }
 
         public static DriverHierarchy Instance
@@ -41,6 +34,28 @@ namespace FYPTesting
             {
                 return instance = new DriverHierarchy();
             }
+        }
+
+        private static void ClearScreenshots()
+        {
+            var filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Screenshots");
+            if(Directory.GetFiles(filePath).Length > 0)
+            {
+                string[] filesToDelete = Directory.GetFiles(filePath);
+                foreach (var file in filesToDelete)
+                {
+                    File.Delete(file);
+                }
+            }
+        }
+
+        public void TakeScreenshot(TestContext testContext)
+        {
+            var folderName = "Screenshots";
+            var fileName = "screenshot_" + testContext.TestName + ".png";
+            var filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, folderName, fileName);
+            Screenshot ss = ((ITakesScreenshot)driver).GetScreenshot();
+            ss.SaveAsFile(filePath, ScreenshotImageFormat.Png);
         }
 
         public void RefreshPage()
@@ -57,7 +72,6 @@ namespace FYPTesting
             catch (NoSuchElementException)
             {
                 //Console.WriteLine("Element with locator: '" + elementLocator + "' was not found in current context page.");
-                //Test.context - Research this.
                 throw;
             }
         }
@@ -87,72 +101,3 @@ namespace FYPTesting
             return builder;
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //private static IWebDriver driver;
-    //private readonly ScenarioContext _scenarioContext;
-
-    ////public SeleniumDriver(ScenarioContext scenarioContext) => _scenarioContext = scenarioContext;
-
-    //[BeforeTestRun]
-    //public static void BeforeTestRun()
-    //{
-    //    _driver = new SeleniumDriver();
-    //    _driver.Setup();
-    //}
-
-    //[AfterTestRun]
-    //public static void AfterTestRun()
-    //{
-    //    _driver.Quit();
-    //}
-
-    //[BeforeTestRun]
-    //public static IWebDriver Setup()
-    //{
-    //    try
-    //    {
-    //        var chromeOptions = new ChromeOptions();
-
-    //        driver = new ChromeDriver(chromeOptions);
-    //        driver.Navigate().GoToUrl("http://127.0.0.2:8081");
-    //        driver.Manage().Window.Maximize();
-
-    //        //_scenarioContext.Set(driver, "WebDriver");
-
-    //        return driver;
-    //    }
-    //    catch (Exception e)
-    //    {
-    //        throw new Exception(e.Message);
-    //    }
-    //}
-
-    //public void Quit()
-    //{
-    //    try
-    //    {
-    //        driver.Quit();
-    //    }
-    //    catch (Exception e)
-    //    {
-    //        throw new Exception(e.Message);
-    //    }
-    //}
-}
-

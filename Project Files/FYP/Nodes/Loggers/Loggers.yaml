@@ -67,12 +67,13 @@ Children:
     DataType: DeadBandModeEnum
     Value: 0
 - Name: DataLogger3
+  Id: g=e84b29a6b74388151f8568274de0cf7c
   Type: Datalogger
   Children:
   - Name: SamplingMode
     Type: PropertyType
     DataType: SamplingModeEnum
-    Value: 2
+    Value: 0
   - Name: Store
     Type: NodePointer
     DataType: NodeId

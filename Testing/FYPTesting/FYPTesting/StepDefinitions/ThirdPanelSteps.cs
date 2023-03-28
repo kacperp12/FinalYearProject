@@ -11,10 +11,13 @@ namespace FYPTesting.StepDefinitions
     {
         private static DriverHierarchy driver = DriverHierarchy.Instance;
         private readonly ScenarioContext _scenarioContext;
+        private readonly TestContext _testContext;
 
-        public ThirdPanelSteps(ScenarioContext scenarioContext)
+
+        public ThirdPanelSteps(ScenarioContext scenarioContext, TestContext testContext)
         {
             _scenarioContext = scenarioContext;
+            _testContext = testContext;
         }
 
         [When(@"I input ""([^""]*)"" into the input field")]
@@ -36,6 +39,7 @@ namespace FYPTesting.StepDefinitions
         {
             var LabelSpan = driver.WaitForElementToClickable(By.XPath("(//div[@data-type='rectangle']//div)[3]//span"));
             LabelSpan.Text.Should().Match(input);
+            driver.TakeScreenshot(_testContext);
         }
 
 
@@ -44,6 +48,7 @@ namespace FYPTesting.StepDefinitions
         {
             var errorSpan = driver.WaitForElementToClickable(By.XPath("(//div[@data-type='rectangle']//div)[5]//span"));
             errorSpan.Text.Should().Match("Please check your input! (15 chars max)", "because max input is 15 chars.");
+            driver.TakeScreenshot(_testContext);
         }
 
         [Then(@"a barcode for this input is generated")]
@@ -51,6 +56,7 @@ namespace FYPTesting.StepDefinitions
         {
             var barcodeImg = driver.WaitForElementToClickable(By.XPath("//div//img"));
             barcodeImg.Should().NotBeNull();
+            driver.TakeScreenshot(_testContext);
         }
     }
 }

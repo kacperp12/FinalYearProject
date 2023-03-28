@@ -11,10 +11,12 @@ namespace FYPTesting.StepDefinitions
     {
         private static DriverHierarchy driver = DriverHierarchy.Instance;
         private readonly ScenarioContext _scenarioContext;
+        private readonly TestContext _testContext;
 
-        public FourthPanelSteps(ScenarioContext scenarioContext)
+        public FourthPanelSteps(ScenarioContext scenarioContext, TestContext testContext)
         {
             _scenarioContext = scenarioContext;
+            _testContext = testContext;
         }
 
         [When(@"I select the ""([^""]*)"" shape")]
@@ -37,6 +39,7 @@ namespace FYPTesting.StepDefinitions
             var shape = driver.WaitForElementToClickable(By.XPath("//div[@data-type='advancedSVGImage']//div//div/*[name()='svg']"));
 
             shape.GetAttribute("data-src").Should().Contain(shapeName);
+            driver.TakeScreenshot(_testContext);
         }
 
         [Then(@"""([^""]*)"" amount of edge selection buttons are displayed")]
@@ -44,6 +47,7 @@ namespace FYPTesting.StepDefinitions
         { 
             var numRadioButtons = driver.GetElementCount("//div[3]//div//label[@data-type='radioButton']");
             numRadioButtons.Should().Be(numEdges + 4); //plus 4 to include the 4 colours
+            driver.TakeScreenshot(_testContext);
         }
 
         [When(@"I select ""([^""]*)"" for edge and ""([^""]*)"" for colour")]
@@ -58,10 +62,12 @@ namespace FYPTesting.StepDefinitions
             throw new PendingStepException();
         }
 
+        // TO-DO: Finish this
         [Then(@"the colour of edge ""([^""]*)"" is changed to ""([^""]*)""")]
         public void ThenTheColourOfEdgeIsChangedTo(string p0, string black)
         {
             throw new PendingStepException();
+            driver.TakeScreenshot(_testContext);
         }
 
     }

@@ -12,10 +12,12 @@ namespace FYPTesting.StepDefinitions
 
         private static DriverHierarchy driver = DriverHierarchy.Instance;
         private readonly ScenarioContext _scenarioContext;
+        private readonly TestContext _testContext;
 
-        public FifthPanelSteps(ScenarioContext scenarioContext)
+        public FifthPanelSteps(ScenarioContext scenarioContext, TestContext testContext)
         {
             _scenarioContext = scenarioContext;
+            _testContext = testContext;
         }
 
         [When(@"I select ""([^""]*)"" from the selection of input types")]
@@ -45,6 +47,7 @@ namespace FYPTesting.StepDefinitions
         {
             var inputLabel = driver.WaitForElementToClickable(By.XPath("(//div[@data-type='rectangle']//div//span)[2]"));
             inputLabel.Text.Should().Match(inputType, "because this input type was selected previously in this scenario.");
+            driver.TakeScreenshot(_testContext);
         }
 
         [When(@"I input ""([^""]*)"" into the textbox")]
@@ -75,6 +78,7 @@ namespace FYPTesting.StepDefinitions
             var firstRowIndexEntry = driver.WaitForElementToClickable(By.XPath("//div[@aria-rowindex='1']//div[2]//span"));
 
             firstRowIndexEntry.Text.Should().Match(inputType, "because the new entry is expected to be of this type.");
+            driver.TakeScreenshot(_testContext);
         }
 
         [Then(@"I am prompted that my submission is successful")]
@@ -82,6 +86,7 @@ namespace FYPTesting.StepDefinitions
         {
             var confirmationMsg = driver.WaitForElementToClickable(By.XPath("(//div[@data-type='panel'])[6]//span"));
             confirmationMsg.Text.Should().Match("Input has been successfully submitted", "because input is successful.");
+            driver.TakeScreenshot(_testContext);
         }
 
         [Then(@"the submit button is disabled")]
@@ -89,6 +94,7 @@ namespace FYPTesting.StepDefinitions
         {
             var submitButton = driver.WaitForElementToClickable(By.XPath("//div[@data-type='rectangle']//div[3]"));
             submitButton.GetCssValue("opacity").Should().Be("0.5", "Object should be partially greyed out when disabled");
+            driver.TakeScreenshot(_testContext);
         }
 
         [Then(@"an error message is displayed")]
@@ -96,6 +102,7 @@ namespace FYPTesting.StepDefinitions
         {
             var errorMsg = driver.WaitForElementToClickable(By.XPath("(//div[@data-type='rectangle']//div//span)[3]"));
             errorMsg.Text.Should().Contain("Please check your input.");
+            driver.TakeScreenshot(_testContext);
         }
     }
 }

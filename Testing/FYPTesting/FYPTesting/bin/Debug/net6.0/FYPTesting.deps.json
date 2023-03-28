@@ -15,7 +15,7 @@
           "Microsoft.NET.Test.Sdk": "17.0.0",
           "Selenium.Support": "4.7.0",
           "Selenium.WebDriver": "4.7.0",
-          "Selenium.WebDriver.ChromeDriver": "108.0.5359.7100",
+          "Selenium.WebDriver.ChromeDriver": "111.0.5563.6400",
           "SpecFlow.MsTest": "3.9.74",
           "SpecFlow.Plus.LivingDocPlugin": "3.9.57"
         },
@@ -520,7 +520,7 @@
           }
         }
       },
-      "Selenium.WebDriver.ChromeDriver/108.0.5359.7100": {},
+      "Selenium.WebDriver.ChromeDriver/111.0.5563.6400": {},
       "SpecFlow/3.9.74": {
         "dependencies": {
           "BoDi": "1.5.0",
@@ -1502,12 +1502,12 @@
       "path": "selenium.webdriver/4.7.0",
       "hashPath": "selenium.webdriver.4.7.0.nupkg.sha512"
     },
-    "Selenium.WebDriver.ChromeDriver/108.0.5359.7100": {
+    "Selenium.WebDriver.ChromeDriver/111.0.5563.6400": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-wrDUVsoQHQct9BodCFgRi1LMKGhwv27ANuS8l7ZXcOn/VS2NqcxxBhSAkcucx4CoZgidny0+ifnFS95nTmnVvg==",
-      "path": "selenium.webdriver.chromedriver/108.0.5359.7100",
-      "hashPath": "selenium.webdriver.chromedriver.108.0.5359.7100.nupkg.sha512"
+      "sha512": "sha512-qLM1wbhtfyX/7cdqCHsuos8jKG67ojsOgKLvoHReRYCBPVbbSl/niedtAVzOLpnEn9sk9C7FH6jHc/QQIR0G4w==",
+      "path": "selenium.webdriver.chromedriver/111.0.5563.6400",
+      "hashPath": "selenium.webdriver.chromedriver.111.0.5563.6400.nupkg.sha512"
     },
     "SpecFlow/3.9.74": {
       "type": "package",

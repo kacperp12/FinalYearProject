@@ -11,10 +11,12 @@ namespace FYPTesting.StepDefinitions
     {
         private static DriverHierarchy driver = DriverHierarchy.Instance;
         private readonly ScenarioContext _scenarioContext;
+        private readonly TestContext _testContext;
 
-        public SecondPanelSteps(ScenarioContext scenarioContext)
+        public SecondPanelSteps(ScenarioContext scenarioContext, TestContext testContext)
         {
             _scenarioContext = scenarioContext;
+            _testContext = testContext;
         }
 
         [When(@"I drag the slider to value ""([^""]*)""")]
@@ -37,6 +39,7 @@ namespace FYPTesting.StepDefinitions
         {
             var TooltipValue = driver.WaitForElementToClickable(By.XPath("//div[@data-type='circularGauge']/div/div/div/div/div/div//span")).Text;
             TooltipValue.Should().Match(SliderValue);
+            driver.TakeScreenshot(_testContext);
         }
 
         [Then(@"the ""([^""]*)"" LED is flashing")]
@@ -67,6 +70,7 @@ namespace FYPTesting.StepDefinitions
             }
 
             isFlashed.Should().BeTrue();
+            driver.TakeScreenshot(_testContext);
         }
 
         [When(@"I input ""([^""]*)"" for ""([^""]*)"" ""([^""]*)"" input box")]
@@ -97,6 +101,7 @@ namespace FYPTesting.StepDefinitions
 
             var UpdateButton = driver.WaitForElementToClickable(By.XPath(UpdateButtonXPath));
             UpdateButton.GetCssValue("opacity").Should().Be("1", "Object should be fully visible once it is enabled");
+            driver.TakeScreenshot(_testContext);
         }
 
         [Then(@"the ""([^""]*)"" update button is greyed out")]
@@ -111,6 +116,7 @@ namespace FYPTesting.StepDefinitions
 
             var UpdateButton = driver.WaitForElementToClickable(By.XPath(UpdateButtonXPath));
             UpdateButton.GetCssValue("opacity").Should().Be("0.5", "Object should be partially greyed out when disabled");
+            driver.TakeScreenshot(_testContext);
         }
 
         [When(@"I press the ""([^""]*)"" update button")]
@@ -144,6 +150,8 @@ namespace FYPTesting.StepDefinitions
                 SliderParameter.GetAttribute("d").Should().Match("M 45.95 13.17 A 75 75 0 0 0 8.67 103.17");
             else
                 SliderParameter.GetAttribute("d").Should().Match("M 143.94 119.18 A 75 75 0 0 0 114.04 13.17");
+
+            driver.TakeScreenshot(_testContext);
         }
 
     }

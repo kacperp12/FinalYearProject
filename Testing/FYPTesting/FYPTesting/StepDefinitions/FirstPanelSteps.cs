@@ -8,21 +8,14 @@ namespace FYPTesting.StepDefinitions
     [Binding]
     public class FirstPanelSteps
     {
-        //IWebDriver driver;
-
         private static DriverHierarchy driver = DriverHierarchy.Instance;
         private readonly ScenarioContext _scenarioContext;
+        private readonly TestContext _testContext;
 
-        public FirstPanelSteps(ScenarioContext scenarioContext)
+        public FirstPanelSteps(ScenarioContext scenarioContext, TestContext testContext)
         {
             _scenarioContext = scenarioContext;
-        }
-
-
-        [BeforeTestRun]
-        public static void SetUp()
-        {
-            //driver.RefreshPage();
+            _testContext = testContext;
         }
 
         [Given(@"the content is refreshed")]
@@ -87,6 +80,8 @@ namespace FYPTesting.StepDefinitions
                 var ErrorMessage = driver.WaitForElementToClickable(By.XPath("//div[@data-type='label'][2]//span"));
                 ErrorMessage.Text.Should().Be("Please check your input!", "because an incorrect input was entered");
             }
+
+            driver.TakeScreenshot(_testContext);
         }
 
         [Then(@"""([^""]*)"" exists")]
@@ -114,6 +109,7 @@ namespace FYPTesting.StepDefinitions
 
             var ObjToLocate = driver.WaitForElementToClickable(By.XPath(ObjXPath));
             ObjToLocate.Should().NotBeNull();
+            driver.TakeScreenshot(_testContext);
         }
 
         [Then(@"a success message is displayed to the user")]
@@ -124,6 +120,7 @@ namespace FYPTesting.StepDefinitions
             var SuccessulSubmissionMsg = driver.WaitForElementToClickable(By.XPath("//div[@data-type='label'][3]//span")).Text;
 
             SuccessulSubmissionMsg.Should().Match(Message);
+            driver.TakeScreenshot(_testContext);
         }
     }
 }

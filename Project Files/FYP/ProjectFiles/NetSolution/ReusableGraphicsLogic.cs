@@ -20,30 +20,41 @@ using System.Text.RegularExpressions;
 
 public class ReusableGraphicsLogic : BaseNetLogic
 {
-    List<(string, string, string)> validationPatterns = new List<(string, string, string)>
-    {
-        ("Eircode", @"^[ACDEFHKNPRTVWXY]{1}[0-9]{1}[0-9W]{1}[ ]{1}[0-9ACDEFHKNPRTVWXY]{4}", "3 characters, a space and 4 characters"),
-        ("Email", @"^[a-zA-Z0-9]{1,15}@[a-zA-Z]{1,8}\.com$", "Maximum of 15 chars, @ symbol, maximum of 8 chars, ends with .com"),
-        ("Number", @"^08[0-9]{8}$", "10 digits long, beginning with 08")
-    };
+    // List of validation patterns for different input types
+    private List<(string, string, string)> validationPatterns = new List<(string, string, string)>
+{
+    // Tuple for Eircode input type
+    ("Eircode", @"^[ACDEFHKNPRTVWXY]{1}[0-9]{1}[0-9W]{1}[ ]{1}[0-9ACDEFHKNPRTVWXY]{4}", "3 characters, a space and 4 characters"),
+    // Tuple for Email input type
+    ("Email", @"^[a-zA-Z0-9]{1,15}@[a-zA-Z]{1,8}\.com$", "Maximum of 15 chars, @ symbol, maximum of 8 chars, ends with .com"),
+    // Tuple for Number input type
+    ("Number", @"^08[0-9]{8}$", "10 digits long, beginning with 08")
+};
 
-    Label ErrorLabel, InputType, UserHelp;
-    TextBox Textbox;
-    Button SubmitButton;
-    bool isSelected = false;
+    // UI elements
+    private Label ErrorLabel, InputType, UserHelp;
+    private TextBox Textbox;
+    private Button SubmitButton;
 
+    // Flag to check if an input type has been selected
+    private bool isSelected = false;
+
+    // Method to validate user input based on the selected input type
     [ExportMethod]
     public void VariableInputValidation(NodeId InputTypeLabelId, NodeId TextboxNodeId, NodeId ErrorLabelNodeId, NodeId SubmitButtonNodeId, NodeId UserHelpLabelNodeId)
     {
+        // Get UI elements from their respective NodeIds
         ErrorLabel = InformationModel.Get<Label>(ErrorLabelNodeId);
         InputType = InformationModel.Get<Label>(InputTypeLabelId);
         Textbox = InformationModel.Get<TextBox>(TextboxNodeId);
         SubmitButton = InformationModel.Get<Button>(SubmitButtonNodeId);
         UserHelp = InformationModel.Get<Label>(UserHelpLabelNodeId);
 
+        // Variables to store the regex pattern and error message for the selected input type
         var returnedRegex = string.Empty;
         var errorMessage = string.Empty;
 
+        // Loop through the validation patterns to find the one that matches the selected input type
         foreach ((string key, string value, string message) in validationPatterns)
         {
             if (key == InputType.Text)
@@ -54,8 +65,10 @@ public class ReusableGraphicsLogic : BaseNetLogic
             }
         }
 
+        // If the user input does not match the regex pattern for the selected input type
         if (!Regex.Match(Textbox.Text, returnedRegex).Success)
         {
+            // Set UI elements to indicate an error
             Textbox.BorderColor = new Color(255, 255, 0, 0);
             ErrorLabel.TextColor = new Color(255, 255, 0, 0);
             ErrorLabel.Text = $"Please check your input. {InputType.Text} requires:";
@@ -65,6 +78,7 @@ public class ReusableGraphicsLogic : BaseNetLogic
         }
         else
         {
+            // Set UI elements to indicate successful validation
             Textbox.BorderColor = new Color(255, 0, 255, 0);
             ErrorLabel.Text = "";
             SubmitButton.Enabled = true;
@@ -86,7 +100,7 @@ public class ReusableGraphicsLogic : BaseNetLogic
         }
         else
         {
-            // Enable the textbox and
+            // Enable the textbox
             textbox.Enabled = true;
 
             // Check if the selected item has changed
@@ -117,5 +131,5 @@ public class ReusableGraphicsLogic : BaseNetLogic
 
         if ((ErrorLabel != null) && (ErrorLabel.IsValid))
             ErrorLabel.Text = "";
-    }   
+    }
 }
