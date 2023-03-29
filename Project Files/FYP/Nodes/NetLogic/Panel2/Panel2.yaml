@@ -1,7 +1,7 @@
 Name: Panel2
 Type: FolderType
 Children:
-- Name: RuntimeNetLogic2
+- Name: ButtonPatternsLogic
   Id: g=522bb4bee7c430020b7119cdec17b6c7
   Type: NetLogic
   Children:

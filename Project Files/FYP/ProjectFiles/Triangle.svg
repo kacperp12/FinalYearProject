@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg">>
-  <line id="Edge 1" x1="100" x2="175" y1="20" y2="100" stroke="black" stroke-width="5"/>
-  <line id="Edge 2" x1="100" x2="25" y1="20" y2="100" stroke="black" stroke-width="5"/>
-  <line id="Edge 3" x1="25" x2="175" y1="100" y2="100" stroke="black" stroke-width="5"/>
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <line id="c1" x1="10" y1="85.5" x2="50" y2="14.5" stroke="red" stroke-width="8" stroke-linecap="round"/>
+  <line id="c2" x1="50" y1="14.5" x2="90" y2="85.5" stroke="red" stroke-width="8" stroke-linecap="round"/>
+  <line id="c3" x1="90" y1="85.5" x2="10" y2="85.5" stroke="red" stroke-width="8" stroke-linecap="round"/>
 </svg>

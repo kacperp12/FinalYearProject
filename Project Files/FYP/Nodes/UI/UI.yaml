@@ -687,30 +687,7 @@ Children:
     DataType: Size
     ModellingRule: Optional
     Value: 600.0
-  - Name: EircodeValidation
-    Type: NetLogic
-    Children:
-    - Class: Method
-      Name: DynamicEircodeInputValidation
-      Children:
-      - Name: ns=0;InputArguments
-        Type: BaseVariableType
-        DataType: Argument
-        ReferenceType: HasProperty
-        ValueRank: OneDimension
-        ArrayDimensions: [0]
-        Value: [{"TypeId":{"Id":296},"Body":{"Name":"TextboxNodeId","DataType":{"Id":17},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"ErrorLabelNodeId","DataType":{"Id":17},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"SubmitButtonNodeId","DataType":{"Id":17},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
-    - Class: Method
-      Name: SubmitEircode
-      Children:
-      - Name: ns=0;InputArguments
-        Type: BaseVariableType
-        DataType: Argument
-        ReferenceType: HasProperty
-        ValueRank: OneDimension
-        ArrayDimensions: [0]
-        Value: [{"TypeId":{"Id":296},"Body":{"Name":"SubmittedLabelNodeId","DataType":{"Id":17},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
-  - Name: NavigationPanel1
+  - Name: NavigationPanel
     Type: NavigationPanel
     Children:
     - Name: Panels
@@ -791,22 +768,6 @@ Children:
           Type: NodePointer
           DataType: NodeId
           Value: {"IdType":2,"Id":"bd84dd270f8421ca57636a649b533f80","Namespace":16}
-          Children:
-          - Name: Kind
-            Type: PropertyType
-            DataType: NodeId
-            Value: {"Id":71,"Namespace":5}
-      - Name: Panel6
-        Type: NavigationPanelItem
-        Children:
-        - Name: Title
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-        - Name: Panel
-          Type: NodePointer
-          DataType: NodeId
-          Value: {"IdType":2,"Id":"0893a5b68b2556436def15e51d458f3a","Namespace":16}
           Children:
           - Name: Kind
             Type: PropertyType

@@ -147,9 +147,9 @@ namespace FYPTesting.StepDefinitions
             var test = SliderParameter.GetAttribute("d");
 
             if (InputType.Equals("Warning"))
-                SliderParameter.GetAttribute("d").Should().Match("M 45.95 13.17 A 75 75 0 0 0 8.67 103.17");
+                SliderParameter.GetAttribute("d").Should().Match("M 224.69 113.38 A 100.5 100.5 0 0 0 124.5 5");
             else
-                SliderParameter.GetAttribute("d").Should().Match("M 143.94 119.18 A 75 75 0 0 0 114.04 13.17");
+                SliderParameter.GetAttribute("d").Should().Match("M 195.56 176.56 A 100.5 100.5 0 0 0 224.69 113.38");
 
             driver.TakeScreenshot(_testContext);
         }

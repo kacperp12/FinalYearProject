@@ -1,7 +1,7 @@
 Name: Panel4
 Type: FolderType
 Children:
-- Name: VectorGr
+- Name: VectorGraphicsLogic
   Id: g=7b0c9374c90ba274de22498af29b450b
   Type: NetLogic
   Children:

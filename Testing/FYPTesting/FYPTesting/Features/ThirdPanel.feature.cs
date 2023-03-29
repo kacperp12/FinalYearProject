@@ -93,12 +93,12 @@ namespace FYPTesting.Features
         
         public virtual void FeatureBackground()
         {
-#line 5
+#line 3
 #line hidden
-#line 6
+#line 4
  testRunner.Given("the content is refreshed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 7
+#line 5
  testRunner.Given("the tab \"Barcode Generator\" is open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
         }
@@ -110,7 +110,7 @@ namespace FYPTesting.Features
             argumentsOfScenario.Add("ID", iD);
             argumentsOfScenario.Add("Object", @object);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Objects Exist on Page", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 9
+#line 7
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -120,10 +120,10 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 5
+#line 3
 this.FeatureBackground();
 #line hidden
-#line 10
+#line 8
  testRunner.Then(string.Format("\"{0}\" exists", @object), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -138,7 +138,7 @@ this.FeatureBackground();
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Object", "Barcode Base Image")]
         public void ObjectsExistOnPage_1()
         {
-#line 9
+#line 7
 this.ObjectsExistOnPage("1", "Barcode Base Image", ((string[])(null)));
 #line hidden
         }
@@ -151,21 +151,8 @@ this.ObjectsExistOnPage("1", "Barcode Base Image", ((string[])(null)));
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Object", "Barcode Input Field")]
         public void ObjectsExistOnPage_2()
         {
-#line 9
+#line 7
 this.ObjectsExistOnPage("2", "Barcode Input Field", ((string[])(null)));
-#line hidden
-        }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Objects Exist on Page: 3")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Third Panel")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "3")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:ID", "3")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Object", "Barcode Submit Button")]
-        public void ObjectsExistOnPage_3()
-        {
-#line 9
-this.ObjectsExistOnPage("3", "Barcode Submit Button", ((string[])(null)));
 #line hidden
         }
         
@@ -177,7 +164,7 @@ this.ObjectsExistOnPage("3", "Barcode Submit Button", ((string[])(null)));
             argumentsOfScenario.Add("Input", input);
             argumentsOfScenario.Add("Comment", comment);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Barcode Input Field Validation (Valid)", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 17
+#line 14
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -187,19 +174,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 5
+#line 3
 this.FeatureBackground();
 #line hidden
-#line 18
+#line 15
  testRunner.When(string.Format("I input \"{0}\" into the input field", input), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 19
- testRunner.And("I Press the submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 20
+#line 16
  testRunner.Then("a barcode for this input is generated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 21
+#line 17
  testRunner.And(string.Format("the input \"{0}\" is displayed under the generated barcode", input), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -215,7 +199,7 @@ this.FeatureBackground();
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Comment", "Smallest input possible")]
         public void BarcodeInputFieldValidationValid_1()
         {
-#line 17
+#line 14
 this.BarcodeInputFieldValidationValid("1", "H", "Smallest input possible", ((string[])(null)));
 #line hidden
         }
@@ -229,7 +213,7 @@ this.BarcodeInputFieldValidationValid("1", "H", "Smallest input possible", ((str
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Comment", "Longest input possible")]
         public void BarcodeInputFieldValidationValid_2()
         {
-#line 17
+#line 14
 this.BarcodeInputFieldValidationValid("2", "1234567890qwert", "Longest input possible", ((string[])(null)));
 #line hidden
         }
@@ -243,7 +227,7 @@ this.BarcodeInputFieldValidationValid("2", "1234567890qwert", "Longest input pos
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Comment", "Regular input")]
         public void BarcodeInputFieldValidationValid_3()
         {
-#line 17
+#line 14
 this.BarcodeInputFieldValidationValid("3", "BARCODE", "Regular input", ((string[])(null)));
 #line hidden
         }
@@ -257,7 +241,7 @@ this.BarcodeInputFieldValidationValid("3", "BARCODE", "Regular input", ((string[
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Comment", "Special chars")]
         public void BarcodeInputFieldValidationValid_4()
         {
-#line 17
+#line 14
 this.BarcodeInputFieldValidationValid("4", "qwerty-=[]#;\'", "Special chars", ((string[])(null)));
 #line hidden
         }
@@ -270,7 +254,7 @@ this.BarcodeInputFieldValidationValid("4", "qwerty-=[]#;\'", "Special chars", ((
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Input Field Input Too Long (>15 chars)", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 30
+#line 26
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -280,13 +264,13 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 5
+#line 3
 this.FeatureBackground();
 #line hidden
-#line 31
+#line 27
  testRunner.When("I input \"1234567890qwertyyyyy\" into the input field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 32
+#line 28
  testRunner.Then("the input is considered invalid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

@@ -1,7 +1,7 @@
 Name: Panel3
 Type: FolderType
 Children:
-- Name: BarcodeGenLogic
+- Name: BarcodeGenerationLogic
   Id: g=7e9c53256ea027ebcd1c218b376df465
   Type: NetLogic
   Children:

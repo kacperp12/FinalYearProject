@@ -1,8 +1,6 @@
 <svg width="300" height="300" xmlns="http://www.w3.org/2000/svg"> 
-  <path d="M 10 10 H 90 V 90 H 10 L 10 10" /> 
-  <!-- Points --> 
   <rect id="c1" x="10" y="10" width="300" height="20" fill="red" />
-  <rect id="c2" x="10" y="10" width="20" height="150" fill="blue"/>
-  <rect id="c3" x="10" y="150" width="300" height="20" fill="green"/>
-  <rect id="c4" x="280" y="10" width="20" height="150" fill="yellow"/>
+  <rect id="c2" x="10" y="30" width="20" height="120" fill="red"/>
+  <rect id="c3" x="10" y="150" width="300" height="20" fill="red"/>
+  <rect id="c4" x="280" y="30" width="20" height="120" fill="red"/>
 </svg>

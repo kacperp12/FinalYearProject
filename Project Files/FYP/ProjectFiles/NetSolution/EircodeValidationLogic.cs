@@ -23,10 +23,10 @@ using FTOptix.EventLogger;
 #endregion
 
 // This class provides a method for validating Eircode inputs and submitting them.
-public sealed class EircodeValidation : BaseNetLogic
+public class EircodeValidationLogic : BaseNetLogic
 {
     // This is the regular expression pattern used to validate Eircode inputs.
-    private const string RegexPattern = @"^[ACDEFHKNPRTVWXY]{1}[0-9]{1}[0-9W]{1}[\ ]{1}[0-9ACDEFHKNPRTVWXY]{4}";
+    private const string RegexPattern = @"^(?:^[AC-FHKNPRTV-Y][0-9]{2}|D6W)[ ]{1}[0-9AC-FHKNPRTV-Y]{4}$";
 
     // These are the UI elements used in the Eircode validation process.
     private Label ErrorLabel;
@@ -81,7 +81,7 @@ public sealed class EircodeValidation : BaseNetLogic
     // This method is used to check if an Eircode input is valid.
     private static bool IsValidEircode(string eircode)
     {
-        return Regex.IsMatch(eircode, RegexPattern) && eircode.Length == 8;
+        return Regex.IsMatch(eircode, RegexPattern);
     }
 
     // This method is used to fade out a label over a specified interval.

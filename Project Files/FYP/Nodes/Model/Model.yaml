@@ -2,7 +2,7 @@ Name: Model
 Type: FolderType
 Children:
 - File: Inputs/Inputs.yaml
-- Name: InputType1
+- Name: InputType
   Id: g=1e97c6d578052dd3c24cdfeb0186cb6f
   Supertype: BaseObjectType
   Children:
@@ -10,10 +10,10 @@ Children:
     Type: BaseDataVariableType
     DataType: String
     Value: "0"
-- Name: Variable1
+- Name: StoreInput
   Type: BaseObjectType
   Children:
-  - Name: Variable1
+  - Name: Input Type
     Id: g=5541e16fe334bb512e5871c0c0aa1009
     Type: BaseDataVariableType
     DataType: String

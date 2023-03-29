@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg">
-  <line id="edge1" x1="20" x2="300" y1="20" y2="20" stroke="black" stroke-width="5"/>
-  <line id="edge2" x1="20" x2="20" y1="150" y2="17" stroke="black" stroke-width="5"/>
-  <line id="edge3" x1="300" x2="300" y1="20" y2="150" stroke="black" stroke-width="5"/>
-  <line id="edge4" x1="20" x2="300" y1="150" y2="150" stroke="black" stroke-width="5"/>
+<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg"> 
+  <rect id="c1" x="10" y="10" width="300" height="20" fill="red" />
+  <rect id="c2" x="10" y="10" width="20" height="150" fill="red"/>
+  <rect id="c3" x="10" y="150" width="300" height="20" fill="red"/>
+  <rect id="c4" x="280" y="10" width="20" height="150" fill="red"/>
 </svg>

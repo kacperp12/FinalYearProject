@@ -49,7 +49,7 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 0.0
-    - Name: Rectangle2
+    - Name: Rectangle
       Type: Rectangle
       Children:
       - Name: Width
@@ -511,7 +511,7 @@ Children:
           DataType: Font
           ModellingRule: Optional
           Value: ""
-      - Name: CircularGauge1
+      - Name: CircularGauge
         Type: CircularGauge
         Children:
         - Name: Value
@@ -1291,7 +1291,7 @@ Children:
                   - Name: DynamicLink
                     Type: DataBind
                     DataType: NodePath
-                    Value: "../../../../../../../../SliderPanel/Rectangle2/GreenLED@NodeId"
+                    Value: "../../../../../../../../SliderPanel/Rectangle/GreenLED@NodeId"
                     Children:
                     - Name: Mode
                       Type: BaseVariableType
@@ -1306,7 +1306,7 @@ Children:
                   - Name: DynamicLink
                     Type: DataBind
                     DataType: NodePath
-                    Value: "../../../../../../../../SliderPanel/Rectangle2/OrangeLED@NodeId"
+                    Value: "../../../../../../../../SliderPanel/Rectangle/OrangeLED@NodeId"
                     Children:
                     - Name: Mode
                       Type: BaseVariableType
@@ -1321,7 +1321,7 @@ Children:
                   - Name: DynamicLink
                     Type: DataBind
                     DataType: NodePath
-                    Value: "../../../../../../../../SliderPanel/Rectangle2/RedLED@NodeId"
+                    Value: "../../../../../../../../SliderPanel/Rectangle/RedLED@NodeId"
                     Children:
                     - Name: Mode
                       Type: BaseVariableType
@@ -1336,7 +1336,7 @@ Children:
                   - Name: DynamicLink
                     Type: DataBind
                     DataType: NodePath
-                    Value: "../../../../../../../../SliderPanel/Rectangle2/CircularGauge1@NodeId"
+                    Value: "../../../../../../../../SliderPanel/Rectangle/CircularGauge@NodeId"
                     Children:
                     - Name: Mode
                       Type: BaseVariableType
@@ -1370,7 +1370,7 @@ Children:
                   - Name: DynamicLink
                     Type: DataBind
                     DataType: NodePath
-                    Value: "../../../../../../../../SliderPanel/Rectangle2/CircularGauge1@NodeId"
+                    Value: "../../../../../../../../SliderPanel/Rectangle/CircularGauge@NodeId"
                     Children:
                     - Name: Mode
                       Type: BaseVariableType
@@ -1967,7 +1967,7 @@ Children:
                   - Name: DynamicLink
                     Type: DataBind
                     DataType: NodePath
-                    Value: "../../../../../../../../SliderPanel/Rectangle2/GreenLED@NodeId"
+                    Value: "../../../../../../../../SliderPanel/Rectangle/GreenLED@NodeId"
                     Children:
                     - Name: Mode
                       Type: BaseVariableType
@@ -1982,7 +1982,7 @@ Children:
                   - Name: DynamicLink
                     Type: DataBind
                     DataType: NodePath
-                    Value: "../../../../../../../../SliderPanel/Rectangle2/OrangeLED@NodeId"
+                    Value: "../../../../../../../../SliderPanel/Rectangle/OrangeLED@NodeId"
                     Children:
                     - Name: Mode
                       Type: BaseVariableType
@@ -1997,7 +1997,7 @@ Children:
                   - Name: DynamicLink
                     Type: DataBind
                     DataType: NodePath
-                    Value: "../../../../../../../../SliderPanel/Rectangle2/RedLED@NodeId"
+                    Value: "../../../../../../../../SliderPanel/Rectangle/RedLED@NodeId"
                     Children:
                     - Name: Mode
                       Type: BaseVariableType
@@ -2012,7 +2012,7 @@ Children:
                   - Name: DynamicLink
                     Type: DataBind
                     DataType: NodePath
-                    Value: "../../../../../../../../SliderPanel/Rectangle2/CircularGauge1@NodeId"
+                    Value: "../../../../../../../../SliderPanel/Rectangle/CircularGauge@NodeId"
                     Children:
                     - Name: Mode
                       Type: BaseVariableType
@@ -2046,7 +2046,7 @@ Children:
                   - Name: DynamicLink
                     Type: DataBind
                     DataType: NodePath
-                    Value: "../../../../../../../../SliderPanel/Rectangle2/CircularGauge1@NodeId"
+                    Value: "../../../../../../../../SliderPanel/Rectangle/CircularGauge@NodeId"
                     Children:
                     - Name: Mode
                       Type: BaseVariableType
@@ -2228,15 +2228,6 @@ Children:
         DataType: LocalizedText
         ModellingRule: Optional
         Value: {"LocaleId":"en-US","Text":"Eircode"}
-      - Name: NodePointer1
-        Type: NodePointer
-        DataType: NodeId
-        Value: {"IdType":0,"Id":0,"Namespace":-1}
-        Children:
-        - Name: Kind
-          Type: PropertyType
-          DataType: NodeId
-          Value: {"IdType":0,"Id":0,"Namespace":-1}
       - Name: HorizontalAlignment
         Type: BaseVariableType
         DataType: HorizontalAlignment
@@ -2262,6 +2253,51 @@ Children:
         DataType: Boolean
         ModellingRule: Optional
         Value: false
+      - Name: ValueChangeBehaviour
+        Type: BaseDataVariableType
+        DataType: ValueChangeBehaviour
+        ModellingRule: Optional
+        Value: 1
+      - Name: Visible
+        Type: BaseDataVariableType
+        DataType: Boolean
+        ModellingRule: Optional
+        Value: true
+      - Name: Enabled
+        Type: BaseDataVariableType
+        DataType: Boolean
+        ModellingRule: Optional
+        Value: true
+      - Name: ContentType
+        Type: BaseVariableType
+        DataType: InputTypeEnum
+        ModellingRule: Optional
+        Value: 0
+      - Name: TextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        ModellingRule: Optional
+        Value: "#000000"
+      - Name: RightMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 0.0
+      - Name: FontSize
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 15.0
+      - Name: TextVerticalAlignment
+        Type: BaseVariableType
+        DataType: TextVerticalAlignment
+        ModellingRule: Optional
+        Value: 1
+      - Name: TextHorizontalAlignment
+        Type: BaseVariableType
+        DataType: TextHorizontalAlignment
+        ModellingRule: Optional
+        Value: 0
       - Name: ModifiedTextHandler1
         Type: EventHandler
         Children:
@@ -2278,22 +2314,12 @@ Children:
             - Name: ns=3;ObjectPointer
               Type: NodePointer
               DataType: NodeId
-              Value: {"IdType":0,"Id":0,"Namespace":-1}
+              Value: {"IdType":2,"Id":"b8e3fd9e44b5202a141d90e9e8f94ff7","Namespace":16}
               Children:
               - Name: Kind
                 Type: PropertyType
                 DataType: NodeId
                 Value: {"Id":58}
-              - Name: DynamicLink
-                Type: DataBind
-                DataType: NodePath
-                Value: "../../../../../../../../EircodeValidation@NodeId"
-                Children:
-                - Name: Mode
-                  Type: BaseVariableType
-                  DataType: DataBindModeType
-                  ModellingRule: Optional
-                  Value: 2
             - Name: ns=3;Method
               Type: BaseDataVariableType
               DataType: String
@@ -2385,51 +2411,6 @@ Children:
             Type: PropertyType
             DataType: UInt16
             Value: 0
-      - Name: ValueChangeBehaviour
-        Type: BaseDataVariableType
-        DataType: ValueChangeBehaviour
-        ModellingRule: Optional
-        Value: 1
-      - Name: Visible
-        Type: BaseDataVariableType
-        DataType: Boolean
-        ModellingRule: Optional
-        Value: true
-      - Name: Enabled
-        Type: BaseDataVariableType
-        DataType: Boolean
-        ModellingRule: Optional
-        Value: true
-      - Name: ContentType
-        Type: BaseVariableType
-        DataType: InputTypeEnum
-        ModellingRule: Optional
-        Value: 0
-      - Name: TextColor
-        Type: BaseDataVariableType
-        DataType: Color
-        ModellingRule: Optional
-        Value: "#000000"
-      - Name: RightMargin
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 0.0
-      - Name: FontSize
-        Type: BaseDataVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 15.0
-      - Name: TextVerticalAlignment
-        Type: BaseVariableType
-        DataType: TextVerticalAlignment
-        ModellingRule: Optional
-        Value: 1
-      - Name: TextHorizontalAlignment
-        Type: BaseVariableType
-        DataType: TextHorizontalAlignment
-        ModellingRule: Optional
-        Value: 0
     - Name: FillColor
       Type: BaseDataVariableType
       DataType: Color
@@ -2662,6 +2643,56 @@ Children:
         DataType: Boolean
         ModellingRule: Optional
         Value: false
+      - Name: BottomMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 0.0
+      - Name: RightMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 0.0
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 27.0
+      - Name: TextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        ModellingRule: Optional
+        Value: "#000000"
+      - Name: Opacity
+        Type: BaseVariableType
+        DataType: Float
+        ModellingRule: Optional
+        Value: 100.0
+      - Name: ImagePath
+        Type: BaseDataVariableType
+        DataType: ResourceUri
+        ModellingRule: Optional
+        Value: ""
+      - Name: ImageWidth
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: -1.0
+      - Name: ImagePosition
+        Type: BaseDataVariableType
+        DataType: Position
+        ModellingRule: Optional
+        Value: 4
+      - Name: ImageHeight
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: -1.0
+      - Name: FontSize
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 16.0
       - Name: MouseClickEventHandler1
         Type: EventHandler
         Children:
@@ -2678,22 +2709,12 @@ Children:
             - Name: ns=3;ObjectPointer
               Type: NodePointer
               DataType: NodeId
-              Value: {"IdType":0,"Id":0,"Namespace":-1}
+              Value: {"IdType":2,"Id":"b8e3fd9e44b5202a141d90e9e8f94ff7","Namespace":16}
               Children:
               - Name: Kind
                 Type: PropertyType
                 DataType: NodeId
                 Value: {"Id":58}
-              - Name: DynamicLink
-                Type: DataBind
-                DataType: NodePath
-                Value: "../../../../../../../../EircodeValidation@NodeId"
-                Children:
-                - Name: Mode
-                  Type: BaseVariableType
-                  DataType: DataBindModeType
-                  ModellingRule: Optional
-                  Value: 2
             - Name: ns=3;Method
               Type: BaseDataVariableType
               DataType: String
@@ -2751,56 +2772,6 @@ Children:
             Type: PropertyType
             DataType: UInt16
             Value: 0
-      - Name: BottomMargin
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 0.0
-      - Name: RightMargin
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 0.0
-      - Name: Height
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 27.0
-      - Name: TextColor
-        Type: BaseDataVariableType
-        DataType: Color
-        ModellingRule: Optional
-        Value: "#000000"
-      - Name: Opacity
-        Type: BaseVariableType
-        DataType: Float
-        ModellingRule: Optional
-        Value: 100.0
-      - Name: ImagePath
-        Type: BaseDataVariableType
-        DataType: ResourceUri
-        ModellingRule: Optional
-        Value: ""
-      - Name: ImageWidth
-        Type: BaseDataVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: -1.0
-      - Name: ImagePosition
-        Type: BaseDataVariableType
-        DataType: Position
-        ModellingRule: Optional
-        Value: 4
-      - Name: ImageHeight
-        Type: BaseDataVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: -1.0
-      - Name: FontSize
-        Type: BaseDataVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 16.0
     - Name: EircodeRules
       Type: Panel
       Children:
@@ -3062,7 +3033,7 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 0.0
-    - Name: TextBox1
+    - Name: UserInputTextbox
       Type: TextBox
       Children:
       - Name: Text
@@ -3161,7 +3132,7 @@ Children:
                 - Name: DynamicLink
                   Type: DataBind
                   DataType: NodePath
-                  Value: "../../../../../../Label2@NodeId"
+                  Value: "../../../../../../ErrorLabel@NodeId"
                   Children:
                   - Name: Mode
                     Type: BaseVariableType
@@ -3210,7 +3181,7 @@ Children:
                 - Name: DynamicLink
                   Type: DataBind
                   DataType: NodePath
-                  Value: "../../../../../../Image1@NodeId"
+                  Value: "../../../../../../BarcodeImage@NodeId"
                   Children:
                   - Name: Mode
                     Type: BaseVariableType
@@ -3225,7 +3196,7 @@ Children:
                 - Name: DynamicLink
                   Type: DataBind
                   DataType: NodePath
-                  Value: "../../../../../../Label1@NodeId"
+                  Value: "../../../../../../BarcodeTextLabel@NodeId"
                   Children:
                   - Name: Mode
                     Type: BaseVariableType
@@ -3240,7 +3211,7 @@ Children:
                 - Name: DynamicLink
                   Type: DataBind
                   DataType: NodePath
-                  Value: "../../../../../../Label2@NodeId"
+                  Value: "../../../../../../ErrorLabel@NodeId"
                   Children:
                   - Name: Mode
                     Type: BaseVariableType
@@ -3286,7 +3257,7 @@ Children:
             Type: PropertyType
             DataType: UInt16
             Value: 0
-    - Name: Label1
+    - Name: BarcodeTextLabel
       Type: Label
       Children:
       - Name: Text
@@ -3319,7 +3290,7 @@ Children:
         DataType: TextVerticalAlignment
         ModellingRule: Optional
         Value: 1
-    - Name: Image1
+    - Name: BarcodeImage
       Type: Image
       Children:
       - Name: Path
@@ -3364,7 +3335,7 @@ Children:
         DataType: Size
         ModellingRule: Optional
         Value: 150.0
-    - Name: Label2
+    - Name: ErrorLabel
       Type: Label
       Children:
       - Name: Text
@@ -3407,7 +3378,7 @@ Children:
     DataType: Size
     ModellingRule: Optional
     Value: 550.0
-  - Name: Panel2
+  - Name: MainContentPanel
     Type: Panel
     Children:
     - Name: Width
@@ -3484,7 +3455,7 @@ Children:
         - Name: SVGElementProperties
           Type: BaseObjectType
           Children:
-          - Name: Property1
+          - Name: Edge 1
             Type: AdvancedSVGImageElementProperty
             Children:
             - Name: ID
@@ -3498,8 +3469,8 @@ Children:
             - Name: Value
               Type: BaseDataVariableType
               DataType: Color
-              Value: "#0f1bd3ed"
-          - Name: Property2
+              Value: "#0f1bd300"
+          - Name: Edge 2
             Type: AdvancedSVGImageElementProperty
             Children:
             - Name: ID
@@ -3513,8 +3484,8 @@ Children:
             - Name: Value
               Type: BaseDataVariableType
               DataType: Color
-              Value: "#76c51ecd"
-          - Name: Property3
+              Value: "#76c51e00"
+          - Name: Edge 3
             Type: AdvancedSVGImageElementProperty
             Children:
             - Name: ID
@@ -3528,8 +3499,8 @@ Children:
             - Name: Value
               Type: BaseDataVariableType
               DataType: Color
-              Value: "#f0ee1fda"
-          - Name: Property4
+              Value: "#f0ee1f00"
+          - Name: Edge 4
             Type: AdvancedSVGImageElementProperty
             Children:
             - Name: ID
@@ -3543,7 +3514,7 @@ Children:
             - Name: Value
               Type: BaseDataVariableType
               DataType: Color
-              Value: "#1d39ae"
+              Value: "#1d39ae00"
         - Name: Path
           Type: BaseDataVariableType
           DataType: ResourceUri
@@ -3584,13 +3555,13 @@ Children:
         - Name: SVGElementProperties
           Type: BaseObjectType
           Children:
-          - Name: Property1
+          - Name: Edge 1
             Type: AdvancedSVGImageElementProperty
             Children:
             - Name: ID
               Type: BaseDataVariableType
               DataType: String
-              Value: "Edge 1"
+              Value: "c1"
             - Name: Property
               Type: BaseDataVariableType
               DataType: AdvancedSVGImagePropertyClass
@@ -3598,14 +3569,14 @@ Children:
             - Name: Value
               Type: BaseDataVariableType
               DataType: Color
-              Value: "#000000"
-          - Name: Property2
+              Value: "#00000000"
+          - Name: Edge 2
             Type: AdvancedSVGImageElementProperty
             Children:
             - Name: ID
               Type: BaseDataVariableType
               DataType: String
-              Value: "Edge 2"
+              Value: "c2"
             - Name: Property
               Type: BaseDataVariableType
               DataType: AdvancedSVGImagePropertyClass
@@ -3613,14 +3584,14 @@ Children:
             - Name: Value
               Type: BaseDataVariableType
               DataType: Color
-              Value: "#000000"
-          - Name: Property3
+              Value: "#00000000"
+          - Name: Edge 3
             Type: AdvancedSVGImageElementProperty
             Children:
             - Name: ID
               Type: BaseDataVariableType
               DataType: String
-              Value: "Edge 3"
+              Value: "c3"
             - Name: Property
               Type: BaseDataVariableType
               DataType: AdvancedSVGImagePropertyClass
@@ -3628,7 +3599,7 @@ Children:
             - Name: Value
               Type: BaseDataVariableType
               DataType: Color
-              Value: "#000000"
+              Value: "#00000000"
         - Name: Path
           Type: BaseDataVariableType
           DataType: ResourceUri
@@ -3721,7 +3692,7 @@ Children:
         DataType: Size
         ModellingRule: Optional
         Value: 0.0
-      - Name: RectanglePanel
+      - Name: CustomisationPanel
         Type: Panel
         Children:
         - Name: Width
@@ -3757,7 +3728,7 @@ Children:
             DataType: Size
             ModellingRule: Optional
             Value: 150.0
-          - Name: Label1
+          - Name: PromptLabel
             Type: Label
             Children:
             - Name: Text
@@ -3891,7 +3862,7 @@ Children:
             DataType: Size
             ModellingRule: Optional
             Value: 0.0
-          - Name: Label1
+          - Name: PromptLabel
             Type: Label
             Children:
             - Name: Text
@@ -3925,7 +3896,7 @@ Children:
               Type: BaseDataVariableType
               DataType: LocalizedText
               ModellingRule: Optional
-              Value: {"LocaleId":"en-US","Text":"Black"}
+              Value: {"LocaleId":"en-US","Text":"Orange"}
             - Name: LeftMargin
               Type: BaseVariableType
               DataType: Size
@@ -4002,7 +3973,7 @@ Children:
               DataType: Size
               ModellingRule: Optional
               Value: 120.0
-        - Name: Button1
+        - Name: EditButton
           Type: Button
           Children:
           - Name: Text
@@ -4153,7 +4124,7 @@ Children:
       Type: BaseDataVariableType
       DataType: NodeId
       Value: {"IdType":2,"Id":"467b2b388df2d2dbc2fc71531253949a","Namespace":16}
-  - Name: Panel1
+  - Name: InitialChoicePanel
     Type: Panel
     Children:
     - Name: Width
@@ -4175,7 +4146,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 0.0
+      Value: 50.0
     - Name: HorizontalAlignment
       Type: BaseVariableType
       DataType: HorizontalAlignment
@@ -4244,7 +4215,7 @@ Children:
         DataType: Size
         ModellingRule: Optional
         Value: 0.0
-      - Name: Label1
+      - Name: PromptLabel
         Type: Label
         Children:
         - Name: Text
@@ -4267,7 +4238,7 @@ Children:
           DataType: Size
           ModellingRule: Optional
           Value: 26.0
-      - Name: CheckBox1
+      - Name: TriangleCheckbox
         Type: CheckBox
         Children:
         - Name: Checked
@@ -4341,7 +4312,7 @@ Children:
                   - Name: DynamicLink
                     Type: DataBind
                     DataType: NodePath
-                    Value: "../../../../../../../../Panel2@NodeId"
+                    Value: "../../../../../../../../MainContentPanel@NodeId"
                     Children:
                     - Name: Mode
                       Type: BaseVariableType
@@ -4371,7 +4342,7 @@ Children:
                   - Name: DynamicLink
                     Type: DataBind
                     DataType: NodePath
-                    Value: "../../../../../../../../Panel2/Rectangle/TriangleSVG@NodeId"
+                    Value: "../../../../../../../../MainContentPanel/Rectangle/TriangleSVG@NodeId"
                     Children:
                     - Name: Mode
                       Type: BaseVariableType
@@ -4416,7 +4387,7 @@ Children:
               Type: PropertyType
               DataType: UInt16
               Value: 0
-      - Name: CheckBox2
+      - Name: RectangleCheckbox
         Type: CheckBox
         Children:
         - Name: Checked
@@ -4490,7 +4461,7 @@ Children:
                   - Name: DynamicLink
                     Type: DataBind
                     DataType: NodePath
-                    Value: "../../../../../../../../Panel2@NodeId"
+                    Value: "../../../../../../../../MainContentPanel@NodeId"
                     Children:
                     - Name: Mode
                       Type: BaseVariableType
@@ -4520,7 +4491,7 @@ Children:
                   - Name: DynamicLink
                     Type: DataBind
                     DataType: NodePath
-                    Value: "../../../../../../../../Panel2/Rectangle/RectangleSVG@NodeId"
+                    Value: "../../../../../../../../MainContentPanel/Rectangle/RectangleSVG@NodeId"
                     Children:
                     - Name: Mode
                       Type: BaseVariableType

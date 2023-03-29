@@ -27,13 +27,6 @@ namespace FYPTesting.StepDefinitions
             InputField.SendKeys(Input + Keys.Enter);
         }
 
-        [When(@"I Press the submit button")]
-        public void WhenIPressTheSubmitButton()
-        {
-            var Button = driver.WaitForElementToClickable(By.XPath("(//div[@data-type='rectangle']//div)[6]//div"));
-            Button.Click();
-        }
-
         [Then(@"the input ""([^""]*)"" is displayed under the generated barcode")]
         public void ThenTheInputIsDisplayedUnderTheGeneratedBarcode(string input)
         {

@@ -36,10 +36,15 @@ namespace FYPTesting
             }
         }
 
+        public IWebDriver getDriver()
+        {
+            return driver;
+        }
+
         private static void ClearScreenshots()
         {
             var filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Screenshots");
-            if(Directory.GetFiles(filePath).Length > 0)
+            if (Directory.GetFiles(filePath).Length > 0)
             {
                 string[] filesToDelete = Directory.GetFiles(filePath);
                 foreach (var file in filesToDelete)
@@ -101,3 +106,4 @@ namespace FYPTesting
             return builder;
         }
     }
+}

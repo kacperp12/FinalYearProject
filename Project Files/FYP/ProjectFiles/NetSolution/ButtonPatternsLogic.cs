@@ -21,7 +21,7 @@ using FTOptix.Datalogger;
 using FTOptix.EventLogger;
 #endregion
 
-public class RuntimeNetLogic2 : BaseNetLogic
+public class ButtonPatternsLogic : BaseNetLogic
 {
     // Declare private fields for the controls and values used in the methods
     private TextBox MinValueBox, MaxValueBox;

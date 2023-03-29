@@ -15,6 +15,11 @@ public class ButtonPattern : FTOptix.UI.Panel
 {
 }
 
+[MapType(NamespaceUri = "FYP", Guid = "bd84dd270f8421ca57636a649b533f80")]
+public class ReusableGraphics : FTOptix.UI.Panel
+{
+}
+
 [MapType(NamespaceUri = "FYP", Guid = "f2c510b95e8f950baa02347c041aca4a")]
 public class VectorGraphics : FTOptix.UI.Panel
 {
@@ -32,10 +37,5 @@ public class BarcodeGenerator : FTOptix.UI.Panel
 
 [MapType(NamespaceUri = "FYP", Guid = "5872f64dd3d6579f8416a14ee1b6882a")]
 public class ReusablePanel : FTOptix.UI.Panel
-{
-}
-
-[MapType(NamespaceUri = "FYP", Guid = "bd84dd270f8421ca57636a649b533f80")]
-public class ReusableGraphics : FTOptix.UI.Panel
 {
 }

@@ -6,7 +6,7 @@ using UAManagedCore;
 //-------------------------------------------
 
 [MapType(NamespaceUri = "FYP", Guid = "1e97c6d578052dd3c24cdfeb0186cb6f")]
-public class InputType1 : UAObject
+public class InputType : UAObject
 {
 #region Children properties
     //-------------------------------------------

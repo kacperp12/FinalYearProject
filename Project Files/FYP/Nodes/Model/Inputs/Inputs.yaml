@@ -4,21 +4,21 @@ Type: FolderType
 Children:
 - Name: Eircode
   Id: g=b026d6fc27b4b36b8b5d56c01a426730
-  Type: InputType1
+  Type: InputType
   Children:
   - Name: InputName
     Type: BaseDataVariableType
     DataType: String
     Value: "Eircode"
 - Name: Email
-  Type: InputType1
+  Type: InputType
   Children:
   - Name: InputName
     Type: BaseDataVariableType
     DataType: String
     Value: "Email"
 - Name: Number
-  Type: InputType1
+  Type: InputType
   Children:
   - Name: InputName
     Type: BaseDataVariableType

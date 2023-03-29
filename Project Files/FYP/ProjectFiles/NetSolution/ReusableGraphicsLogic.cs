@@ -24,7 +24,7 @@ public class ReusableGraphicsLogic : BaseNetLogic
     private List<(string, string, string)> validationPatterns = new List<(string, string, string)>
 {
     // Tuple for Eircode input type
-    ("Eircode", @"^[ACDEFHKNPRTVWXY]{1}[0-9]{1}[0-9W]{1}[ ]{1}[0-9ACDEFHKNPRTVWXY]{4}", "3 characters, a space and 4 characters"),
+    ("Eircode", @"^(?:^[AC-FHKNPRTV-Y][0-9]{2}|D6W)[ ]{1}[0-9AC-FHKNPRTV-Y]{4}$", "3 characters, a space and 4 characters"),
     // Tuple for Email input type
     ("Email", @"^[a-zA-Z0-9]{1,15}@[a-zA-Z]{1,8}\.com$", "Maximum of 15 chars, @ symbol, maximum of 8 chars, ends with .com"),
     // Tuple for Number input type
@@ -89,13 +89,15 @@ public class ReusableGraphicsLogic : BaseNetLogic
     [ExportMethod]
     public void EnableUserInput(NodeId inputBox, NodeId listBox, NodeId SubmitButtonNodeId)
     {
+        // Retrieve the TextBox and ListBox objects
         TextBox textbox = InformationModel.Get<TextBox>(inputBox);
         ListBox listbox = InformationModel.Get<ListBox>(listBox);
 
-        // Disable the textbox and submit button if no input is selected
         if (listbox.UISelectedItem == null)
         {
+            // Clear the text in the TextBox
             textbox.Text = "";
+            // Disable the TextBox
             textbox.Enabled = false;
         }
         else
@@ -105,12 +107,16 @@ public class ReusableGraphicsLogic : BaseNetLogic
 
             // Check if the selected item has changed
             bool isItemSelected = listbox.UISelectedValue != null;
+            // If the selected item has changed and was not previously selected
             if (isItemSelected && !isSelected)
             {
+                // Set isSelected to true to indicate that an item has been selected
                 isSelected = true;
             }
+            // If the selected item has changed and was previously selected
             else if (!isItemSelected && isSelected)
             {
+                // Set isSelected to false to indicate that no item is currently selected
                 isSelected = false;
             }
         }
@@ -119,16 +125,22 @@ public class ReusableGraphicsLogic : BaseNetLogic
     [ExportMethod]
     public void ResetUserInput(NodeId inputBox)
     {
+        // Retrieve the TextBox object
         TextBox textbox = InformationModel.Get<TextBox>(inputBox);
+
+        // Clear the text in the TextBox and set its border color to transparent gray
         textbox.Text = "";
         textbox.BorderColor = new Color(128, 128, 128, 0);
 
+        // If a SubmitButton object exists and is valid, disable it
         if ((SubmitButton != null) && (SubmitButton.IsValid))
             SubmitButton.Enabled = false;
 
+        // If a UserHelp object exists and is valid, clear its text
         if ((UserHelp != null) && (UserHelp.IsValid))
             UserHelp.Text = "";
 
+        // If an ErrorLabel object exists and is valid, clear its text
         if ((ErrorLabel != null) && (ErrorLabel.IsValid))
             ErrorLabel.Text = "";
     }

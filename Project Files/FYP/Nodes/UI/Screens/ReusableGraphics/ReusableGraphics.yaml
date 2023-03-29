@@ -83,7 +83,7 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 0.0
-    - Name: Label1
+    - Name: PromptLabel
       Type: Label
       Children:
       - Name: Text
@@ -131,7 +131,7 @@ Children:
         DataType: Size
         ModellingRule: Optional
         Value: 0.0
-    - Name: TextBox1
+    - Name: InputTextbox
       Type: TextBox
       Children:
       - Name: Text
@@ -230,7 +230,7 @@ Children:
                 - Name: DynamicLink
                   Type: DataBind
                   DataType: NodePath
-                  Value: "../../../../../../Panel1/Label2@NodeId"
+                  Value: "../../../../../../LabelPanel/InputTypeLabel@NodeId"
                   Children:
                   - Name: Mode
                     Type: BaseVariableType
@@ -260,7 +260,7 @@ Children:
                 - Name: DynamicLink
                   Type: DataBind
                   DataType: NodePath
-                  Value: "../../../../../../Label3@NodeId"
+                  Value: "../../../../../../ErrorLabel@NodeId"
                   Children:
                   - Name: Mode
                     Type: BaseVariableType
@@ -275,7 +275,7 @@ Children:
                 - Name: DynamicLink
                   Type: DataBind
                   DataType: NodePath
-                  Value: "../../../../../../Button1@NodeId"
+                  Value: "../../../../../../SubmitButton@NodeId"
                   Children:
                   - Name: Mode
                     Type: BaseVariableType
@@ -290,7 +290,7 @@ Children:
                 - Name: DynamicLink
                   Type: DataBind
                   DataType: NodePath
-                  Value: "../../../../../../Panel2/Label2@NodeId"
+                  Value: "../../../../../../Panel/HelpLabel@NodeId"
                   Children:
                   - Name: Mode
                     Type: BaseVariableType
@@ -336,7 +336,7 @@ Children:
             Type: PropertyType
             DataType: UInt16
             Value: 0
-    - Name: Button1
+    - Name: SubmitButton
       Type: Button
       Children:
       - Name: Text
@@ -477,7 +477,7 @@ Children:
             Type: PropertyType
             DataType: UInt16
             Value: 0
-    - Name: Panel1
+    - Name: LabelPanel
       Type: Panel
       Children:
       - Name: Width
@@ -500,7 +500,7 @@ Children:
         DataType: Size
         ModellingRule: Optional
         Value: 75.0
-      - Name: Label2
+      - Name: InputTypeLabel
         Type: Label
         Children:
         - Name: Text
@@ -552,7 +552,7 @@ Children:
           DataType: TextHorizontalAlignment
           ModellingRule: Optional
           Value: 0
-    - Name: Label3
+    - Name: ErrorLabel
       Type: Label
       Children:
       - Name: Text
@@ -585,7 +585,7 @@ Children:
         DataType: Size
         ModellingRule: Optional
         Value: 24.0
-    - Name: Panel2
+    - Name: Panel
       Type: Panel
       Children:
       - Name: Width
@@ -608,7 +608,7 @@ Children:
         DataType: Size
         ModellingRule: Optional
         Value: 154.0
-      - Name: Label2
+      - Name: HelpLabel
         Type: Label
         Children:
         - Name: Text
@@ -670,7 +670,7 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 550.0
-    - Name: ListBox1
+    - Name: Listbox
       Type: ListBox
       Children:
       - Name: Model
@@ -792,7 +792,7 @@ Children:
                 - Name: DynamicLink
                   Type: DataBind
                   DataType: NodePath
-                  Value: "../../../../../../ReusablePanel1/Rectangle/TextBox1@NodeId"
+                  Value: "../../../../../../ReusablePanel1/Rectangle/InputTextbox@NodeId"
                   Children:
                   - Name: Mode
                     Type: BaseVariableType
@@ -826,7 +826,7 @@ Children:
                 - Name: DynamicLink
                   Type: DataBind
                   DataType: NodePath
-                  Value: "../../../../../../ReusablePanel1/Rectangle/TextBox1@NodeId"
+                  Value: "../../../../../../ReusablePanel1/Rectangle/InputTextbox@NodeId"
                   Children:
                   - Name: Mode
                     Type: BaseVariableType
@@ -856,7 +856,7 @@ Children:
                 - Name: DynamicLink
                   Type: DataBind
                   DataType: NodePath
-                  Value: "../../../../../../ReusablePanel1/Rectangle/Button1@NodeId"
+                  Value: "../../../../../../ReusablePanel1/Rectangle/SubmitButton@NodeId"
                   Children:
                   - Name: Mode
                     Type: BaseVariableType
@@ -910,7 +910,7 @@ Children:
         DataType: Boolean
         ModellingRule: Optional
         Value: true
-    - Name: Label1
+    - Name: InputTypesLabel
       Type: Label
       Children:
       - Name: Text
@@ -933,7 +933,7 @@ Children:
         DataType: Size
         ModellingRule: Optional
         Value: 20.0
-    - Name: DataGrid1
+    - Name: DataGrid
       Type: DataGrid
       Children:
       - Name: Model
@@ -952,7 +952,7 @@ Children:
       - Name: Query
         Type: BaseDataVariableType
         DataType: String
-        Value: "SELECT * FROM \"DataLogger3\" ORDER BY Timestamp DESC"
+        Value: "SELECT * FROM \"DataLogger\" ORDER BY Timestamp DESC"
       - Name: Columns
         Type: BaseObjectType
         Children:
@@ -1092,7 +1092,7 @@ Children:
         - Name: DynamicLink
           Type: DataBind
           DataType: NodePath
-          Value: "../../ListBox1/SelectedItem@NodeId"
+          Value: "../../Listbox/SelectedItem@NodeId"
           Children:
           - Name: Mode
             Type: BaseVariableType
@@ -1102,9 +1102,9 @@ Children:
       - Name: Rectangle
         Type: Rectangle
         Children:
-        - Name: Label1
+        - Name: PromptLabel
           Type: Label
-        - Name: TextBox1
+        - Name: InputTextbox
           Type: TextBox
           Children:
           - Name: Text
@@ -1148,7 +1148,7 @@ Children:
                     - Name: DynamicLink
                       Type: DataBind
                       DataType: NodePath
-                      Value: "../../../../../../Panel1/Label2@NodeId"
+                      Value: "../../../../../../LabelPanel/InputTypeLabel@NodeId"
                   - Name: TextboxNodeId
                     Type: BaseDataVariableType
                     DataType: NodeId
@@ -1166,7 +1166,7 @@ Children:
                     - Name: DynamicLink
                       Type: DataBind
                       DataType: NodePath
-                      Value: "../../../../../../Label3@NodeId"
+                      Value: "../../../../../../ErrorLabel@NodeId"
                   - Name: SubmitButtonNodeId
                     Type: BaseDataVariableType
                     DataType: NodeId
@@ -1175,7 +1175,7 @@ Children:
                     - Name: DynamicLink
                       Type: DataBind
                       DataType: NodePath
-                      Value: "../../../../../../Button1@NodeId"
+                      Value: "../../../../../../SubmitButton@NodeId"
                   - Name: UserHelpLabelNodeId
                     Type: BaseDataVariableType
                     DataType: NodeId
@@ -1184,7 +1184,7 @@ Children:
                     - Name: DynamicLink
                       Type: DataBind
                       DataType: NodePath
-                      Value: "../../../../../../Panel2/Label2@NodeId"
+                      Value: "../../../../../../Panel/HelpLabel@NodeId"
             - Name: EventArguments
               Type: UserTextChanged
               Children:
@@ -1229,7 +1229,7 @@ Children:
             DataType: Boolean
             ModellingRule: Optional
             Value: true
-        - Name: Button1
+        - Name: SubmitButton
           Type: Button
           Children:
           - Name: MouseClickEventHandler1
@@ -1269,32 +1269,6 @@ Children:
                     Type: BaseDataVariableType
                     DataType: NodeId
                     Value: {"IdType":2,"Id":"72dca9e6935388952e4f5727ef60c584","Namespace":16}
-              - Name: MethodContainer2
-                Type: BaseObjectType
-                Children:
-                - Name: ns=3;ObjectPointer
-                  Type: NodePointer
-                  DataType: NodeId
-                  Value: {"IdType":0,"Id":0,"Namespace":-1}
-                  Children:
-                  - Name: Kind
-                    Type: PropertyType
-                    DataType: NodeId
-                    Value: {"Id":58}
-                  - Name: DynamicLink
-                    Type: DataBind
-                    DataType: NodePath
-                    Value: "../../../../../../../DataGrid1@NodeId"
-                    Children:
-                    - Name: Mode
-                      Type: BaseVariableType
-                      DataType: DataBindModeType
-                      ModellingRule: Optional
-                      Value: 2
-                - Name: ns=3;Method
-                  Type: BaseDataVariableType
-                  DataType: String
-                  Value: "Refresh"
               - Name: MethodContainer3
                 Type: BaseObjectType
                 Children:
@@ -1311,6 +1285,32 @@ Children:
                   Type: BaseDataVariableType
                   DataType: String
                   Value: "Log"
+              - Name: MethodContainer4
+                Type: BaseObjectType
+                Children:
+                - Name: ns=3;ObjectPointer
+                  Type: NodePointer
+                  DataType: NodeId
+                  Value: {"IdType":0,"Id":0,"Namespace":-1}
+                  Children:
+                  - Name: Kind
+                    Type: PropertyType
+                    DataType: NodeId
+                    Value: {"Id":58}
+                  - Name: DynamicLink
+                    Type: DataBind
+                    DataType: NodePath
+                    Value: "../../../../../../../DataGrid@NodeId"
+                    Children:
+                    - Name: Mode
+                      Type: BaseVariableType
+                      DataType: DataBindModeType
+                      ModellingRule: Optional
+                      Value: 2
+                - Name: ns=3;Method
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Value: "Refresh"
             - Name: EventArguments
               Type: MouseClickEvent
               Children:
@@ -1351,10 +1351,10 @@ Children:
             DataType: Boolean
             ModellingRule: Optional
             Value: false
-        - Name: Panel1
+        - Name: LabelPanel
           Type: Panel
           Children:
-          - Name: Label2
+          - Name: InputTypeLabel
             Type: Label
             Children:
             - Name: Text
@@ -1366,12 +1366,12 @@ Children:
                 Type: DataBind
                 DataType: NodePath
                 Value: "{InputType}/InputName"
-        - Name: Label3
+        - Name: ErrorLabel
           Type: Label
-        - Name: Panel2
+        - Name: Panel
           Type: Panel
           Children:
-          - Name: Label2
+          - Name: HelpLabel
             Type: Label
         - Name: FillColor
           Type: BaseDataVariableType
@@ -1455,7 +1455,7 @@ Children:
         DataType: Size
         ModellingRule: Optional
         Value: 10.0
-      - Name: Label1
+      - Name: PromptLabel
         Type: Label
         Children:
         - Name: Text
@@ -1493,7 +1493,7 @@ Children:
           DataType: Size
           ModellingRule: Optional
           Value: 20.0
-      - Name: Button1
+      - Name: OKButton
         Type: Button
         Children:
         - Name: Text

@@ -26,7 +26,7 @@ using ZXing.Rendering;
 using System.Text.RegularExpressions;
 #endregion
 
-public class BarcodeGenLogic : BaseNetLogic
+public class BarcodeGenerationLogic : BaseNetLogic
 {
     private TextBox Textbox;
 

@@ -1,72 +1,7 @@
 Name: Loggers
 Type: FolderType
 Children:
-- Name: DataLogger2
-  Type: Datalogger
-  Children:
-  - Name: SamplingMode
-    Type: PropertyType
-    DataType: SamplingModeEnum
-    Value: 2
-  - Name: Store
-    Type: NodePointer
-    DataType: NodeId
-    Value: {"IdType":2,"Id":"5cfe1d9d425e04b5c33ea77f5dee6834","Namespace":16}
-    Children:
-    - Name: Kind
-      Type: PropertyType
-      DataType: NodeId
-      Value: {"Id":1,"Namespace":17}
-  - Name: VariablesToLog
-    Type: BaseObjectType
-    Children:
-    - Name: Variable1
-      Type: VariableToLog
-      DataType: BaseDataType
-      Children:
-      - Name: LastValue
-        Type: PropertyType
-        DataType: BaseDataType
-        AccessLevel: Read
-      - Name: Timestamp
-        Type: PropertyType
-        DataType: UtcTime
-        AccessLevel: Read
-        Value: "1601-01-01T00:00:00.0000000"
-      - Name: LastOperationCode
-        Type: PropertyType
-        DataType: StatusCode
-        AccessLevel: Read
-        Value: 0
-      - Name: DynamicLink
-        Type: DataBind
-        DataType: NodePath
-        Value: "../../../../Model/Variable1/Variable1"
-        Children:
-        - Name: Mode
-          Type: BaseVariableType
-          DataType: DataBindModeType
-          Value: 2
-  - Name: LogLocalTime
-    Type: PropertyType
-    DataType: Boolean
-    Value: true
-  - Name: PollingPeriod
-    Type: PropertyType
-    DataType: Duration
-    Value: "0:00:00:0.0010000"
-  - Class: Reference
-    Target: ns=21;i=21
-    Direction: Forward
-  - Name: SamplingPeriod
-    Type: PropertyType
-    DataType: Duration
-    Value: "0:00:00:0.0000000"
-  - Name: DefaultDeadBandMode
-    Type: PropertyType
-    DataType: DeadBandModeEnum
-    Value: 0
-- Name: DataLogger3
+- Name: DataLogger
   Id: g=e84b29a6b74388151f8568274de0cf7c
   Type: Datalogger
   Children:
@@ -107,7 +42,7 @@ Children:
       - Name: DynamicLink
         Type: DataBind
         DataType: NodePath
-        Value: "../../../../Model/Variable1/Variable1"
+        Value: "../../../../Model/StoreInput/Input Type"
         Children:
         - Name: Mode
           Type: BaseVariableType
