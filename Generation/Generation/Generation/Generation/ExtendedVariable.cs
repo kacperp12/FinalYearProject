@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Generation
 {
     // This class represents an extended variable with additional and different properties beyond the standard ICommonProperties interface
-    class ExtendedVariable
+    public class ExtendedVariable
     {
         public string Name { get; set; }
         public virtual string Type { get; set; }

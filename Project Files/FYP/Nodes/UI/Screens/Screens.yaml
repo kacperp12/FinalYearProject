@@ -4120,10 +4120,6 @@ Children:
       DataType: Boolean
       ModellingRule: Optional
       Value: false
-    - Name: RecipeSchema
-      Type: BaseDataVariableType
-      DataType: NodeId
-      Value: {"IdType":2,"Id":"467b2b388df2d2dbc2fc71531253949a","Namespace":16}
   - Name: InitialChoicePanel
     Type: Panel
     Children:

@@ -28,7 +28,11 @@ public class VectorGraphicsLogic : BaseNetLogic
         if (ShapeName.BrowseName.Equals("TriangleCheckbox"))
         {
             var radioButtonToDisable = SearchNode(ShapePanel, "OptionButton4");
-            radioButtonToDisable.Delete();
+            
+            if(radioButtonToDisable != null)
+                radioButtonToDisable.Delete();
+            else
+                throw new NullReferenceException("Target is null. Cannot delete object!");
         }
 
         // Make the ShapePanel and SvgImage visible, and hide the StartPanel

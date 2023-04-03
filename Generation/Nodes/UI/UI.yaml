@@ -100,14 +100,14 @@ Children:
     DataType: Size
     ModellingRule: Optional
     Value: 400.0
-  - Name: button
+  - Name: Button
     Type: Button
     Children:
     - Name: Text
       Type: BaseDataVariableType
       DataType: LocalizedText
       ModellingRule: Optional
-      Value: {"LocaleId":"en-US","Text":"button"}
+      Value: {"LocaleId":"en-US","Text":"Button"}
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size
@@ -117,7 +117,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 50
+      Value: 100
   - Name: Object 1
     Type: Label
     Children:
@@ -135,24 +135,15 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 50
-  - Name: led
-    Type: Led
+      Value: 100
+  - Name: label
+    Type: Label
     Children:
-    - Name: Active
+    - Name: Text
       Type: BaseDataVariableType
-      DataType: Boolean
-      Value: false
-    - Name: Width
-      Type: BaseVariableType
-      DataType: Size
+      DataType: LocalizedText
       ModellingRule: Optional
-      Value: 50.0
-    - Name: Height
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 50.0
+      Value: {"LocaleId":"en-US","Text":"label"}
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size
@@ -162,7 +153,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 100
+      Value: 300
   - Name: Object 2
     Type: Label
     Children:
@@ -180,4 +171,4 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 100
+      Value: 300
