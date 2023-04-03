@@ -1,6 +1,6 @@
-# FinalYearProject
+# Final Year Project
 
-This repository contains all of the files and folders required for my final year project "FTOPtix: A Comprehensive Study".
+This repository contains all of the files and folders required for my final year project "FactoryTalk Optix: A Comprehensive Study".
 
 Contained within this repository are:
 - FactoryTalk Optix project files
